@@ -30,7 +30,7 @@ export const elBatch2: Question[] = [
     id: 503,
     topic: "tvarovanie",
     question: "Derivacny RC clanok sa pouziva ako:",
-    options: ["dolnopriepustny filter", "hornopriepustny filter", "pasmovy filter", "pasmova zadrz"],
+    options: ["dolnopriepustny filter", "hornopriepustny filter", "pasmovy priepustny filter", "pasmova zadrz (notch)"],
     correctIndex: 1,
     explanation: "Derivacny RC clanok je hornopriepustny filter - prepusta vysoke frekvencie a potlaca nizke. Vystup sa odoberá z rezistora."
   },
@@ -54,7 +54,7 @@ export const elBatch2: Question[] = [
     id: 506,
     topic: "tvarovanie",
     question: "Klopny obvod typu D ma funkciu:",
-    options: ["pamatania jedneho bitu", "scitania", "nasobenia", "delenia frekvencie na tretinu"],
+    options: ["pamatania jedneho bitu", "scitania dvoch bitov", "nasobenia dvoch cisel", "delenia frekvencie na tretinu"],
     correctIndex: 0,
     explanation: "D klopny obvod (Data/Delay) si pamatá hodnotu na vstupe D v momente hodinoveho impulzu. Sluzi na pamatanie jedneho bitu informacie."
   },
@@ -62,7 +62,7 @@ export const elBatch2: Question[] = [
     id: 507,
     topic: "tvarovanie",
     question: "T klopny obvod pri kazdom hodinovom impulze:",
-    options: ["sa nastavi na 1", "sa vynuluje", "zmeni svoj stav na opacny", "zostane v rovnakom stave"],
+    options: ["sa nastavi na logicku 1", "sa vynuluje na logicku 0", "zmeni svoj stav na opacny", "zostane v rovnakom stave"],
     correctIndex: 2,
     explanation: "T klopny obvod (Toggle) pri kazdom hodinovom impulze zmeni svoj stav na opacny - z 0 na 1 alebo z 1 na 0. Pouziva sa na delenie frekvencie."
   },
@@ -94,7 +94,7 @@ export const elBatch2: Question[] = [
     id: 511,
     topic: "tvarovanie",
     question: "Schmittov obvod sa pouziva na:",
-    options: ["zosilnenie signalu", "tvarovanie signalu s hysterezou", "generovanie sinusoveho signalu", "meranie frekvencie"],
+    options: ["zosilnenie analogoveho signalu", "tvarovanie signalu s hysterezou", "generovanie sinusoveho signalu", "meranie frekvencie signalu"],
     correctIndex: 1,
     explanation: "Schmittov obvod tvaruje signal s vyuzitim hystereze - ma rozne prahy pre prechod z 0 na 1 a z 1 na 0, cim odstrañuje sum zo signalu."
   },
@@ -102,7 +102,7 @@ export const elBatch2: Question[] = [
     id: 512,
     topic: "tvarovanie",
     question: "Casovac 555 v astabilnom rezime generuje:",
-    options: ["jednorazovy impulz", "pravidelne obdlznikove impulzy", "sinusovy signal", "pilovity signal"],
+    options: ["jednorazovy obdlznikovy impulz", "pravidelne obdlznikove impulzy", "sinusovy signal s konst. amplitudou", "pilovity signal s meniacou sa amplitudou"],
     correctIndex: 1,
     explanation: "Casovac 555 v astabilnom rezime generuje nepretrzite pravidelne obdlznikove impulzy s frekvenciou urcenou externymi sucastkami R a C."
   },
@@ -110,7 +110,7 @@ export const elBatch2: Question[] = [
     id: 513,
     topic: "tvarovanie",
     question: "Casovac 555 v monostabilnom rezime generuje:",
-    options: ["nepretrzite impulzy", "jednorazovy impulz definovanej dlzky", "sinusovy signal", "trojuholnikovy signal"],
+    options: ["nepretrzite obdlznikove impulzy", "jednorazovy impulz definovanej dlzky", "sinusovy signal definovanej amplitudy", "trojuholnikovy signal meniacej sa striedou"],
     correctIndex: 1,
     explanation: "V monostabilnom rezime casovac 555 po spusteni vygeneruje jeden impulz s dlzkou t = 1,1 * R * C a potom sa vrati do povodneho stavu."
   },
@@ -215,7 +215,7 @@ export const elBatch2: Question[] = [
     id: 526,
     topic: "cislicova",
     question: "Multiplexor je obvod, ktory:",
-    options: ["rozdeluje jeden vstup na viacero vystupov", "vyberá jeden z viacerych vstupov na vystup", "scitava dve binarne cisla", "dekoduje binarne cislo"],
+    options: ["rozdeluje jeden vstup na viacero vystupov", "vyberá jeden z viacerych vstupov na vystup", "scitava dve binarne cisla na vystupe", "dekoduje binarne cislo na vystupe"],
     correctIndex: 1,
     explanation: "Multiplexor (MUX) vyberá jeden z viacerych vstupov a pripoji ho na vystup podla adresovych vstupov."
   },
@@ -223,7 +223,7 @@ export const elBatch2: Question[] = [
     id: 527,
     topic: "cislicova",
     question: "Demultiplexor je obvod, ktory:",
-    options: ["vyberá jeden z viacerych vstupov", "rozdeluje jeden vstup na viacero vystupov", "scitava binarne cisla", "neguje vstupny signal"],
+    options: ["vyberá jeden z viacerych vstupov na vystup", "rozdeluje jeden vstup na viacero vystupov", "scitava binarne cisla dvoch operandov", "neguje vstupny signal na komplementarny"],
     correctIndex: 1,
     explanation: "Demultiplexor (DEMUX) rozdeluje jeden vstupny signal na jeden z viacerych vystupov podla adresovych vstupov."
   },
@@ -263,7 +263,7 @@ export const elBatch2: Question[] = [
     id: 532,
     topic: "cislicova",
     question: "De Morganov zakon hovori, ze NOT(A AND B) sa rovna:",
-    options: ["NOT A AND NOT B", "NOT A OR NOT B", "A OR B", "A AND B"],
+    options: ["NOT A AND NOT B", "NOT A OR NOT B", "A OR NOT B", "NOT A AND B"],
     correctIndex: 1,
     explanation: "Podla De Morganovho zakona: negacia sucinu sa rovna suctu negacii, teda NOT(A AND B) = NOT A OR NOT B."
   },
@@ -279,7 +279,7 @@ export const elBatch2: Question[] = [
     id: 534,
     topic: "cislicova",
     question: "Asynchronny citac sa od synchronneho lisi tym, ze:",
-    options: ["nema hodinovy signal", "klopne obvody su budene kaskadovito", "pouziva ine hradla", "ma viac vystupov"],
+    options: ["nema hodinovy signal na vstupe", "klopne obvody su budene kaskadovito", "pouziva ine typy logickych hradiel", "ma viac vystupov ako synchronny"],
     correctIndex: 1,
     explanation: "V asynchronnom citaci je vystup jedneho klopneho obvodu hodinovym signalom pre dalsi (kaskadove budenie), co sposobuje oneskorenie. V synchronnom su vsetky budene spolocnym hodinovym signalom."
   },
@@ -287,7 +287,7 @@ export const elBatch2: Question[] = [
     id: 535,
     topic: "cislicova",
     question: "Register je obvod slúziaci na:",
-    options: ["scitanie cisel", "docasne ulozenie skupiny bitov", "generovanie hodinoveho signalu", "zosilnenie signalu"],
+    options: ["scitanie binárnych cisel", "docasne ulozenie skupiny bitov", "generovanie hodinoveho signalu", "zosilnenie digitalneho signalu"],
     correctIndex: 1,
     explanation: "Register je skupina klopnych obvodov slúziaca na docasne ulozenie skupiny bitov (napr. 8-bitove slovo)."
   },
@@ -384,7 +384,7 @@ export const elBatch2: Question[] = [
     id: 547,
     topic: "svetelna",
     question: "LED dioda vytvara svetlo pomocou:",
-    options: ["zahriateho vladna", "vyboja v plyne", "rekombinacie nosicov naboja na PN prechode", "luminiscencie fosforeskujucej latky"],
+    options: ["zahriateho volframoveho vladna na vysoku teplotu", "vyboja v plyne a naslednej premeny UV ziarenia", "rekombinacie nosicov naboja na PN prechode", "luminiscencie fosforeskujucej latky po excitacii"],
     correctIndex: 2,
     explanation: "LED (Light Emitting Diode) vytvara svetlo elektroluniniscenciou - rekombinaciou elektronov a dier na PN prechode polovovica."
   },
@@ -448,7 +448,7 @@ export const elBatch2: Question[] = [
     id: 555,
     topic: "svetelna",
     question: "Co je to stroboskopicky efekt pri osvetleni?",
-    options: ["zmena farby svetla", "blikanie svetla synchronne s pohybom, co vyvolava zdanie nehybnosti", "postupne stlmovanie svetla", "rozptyl svetla"],
+    options: ["zmena farby svetla vplyvom otacania strojov", "blikanie svetla synchronne s pohybom, co vyvolava zdanie nehybnosti", "postupne stlmovanie svetla sposobene starnutim zdroja", "rozptyl svetla vplyvom vibracie svietidla pri otackach"],
     correctIndex: 1,
     explanation: "Stroboskopicky efekt nastáva, ked frekvencia blikania svetla (napr. ziarivky na 50 Hz) je synchronna s otackami stroja, co moze vyvolat dojem, ze sa stroj netocí."
   },
@@ -464,7 +464,7 @@ export const elBatch2: Question[] = [
     id: 557,
     topic: "svetelna",
     question: "Halogénova ziarovka sa od klasickej ziarovky lisi tym, ze:",
-    options: ["neobsahuje vlakno", "obsahuje halogénovy plyn, ktory predlzuje zivotnost vlakna", "pouziva LED cipy", "pracuje na nizkom napati"],
+    options: ["neobsahuje vlakno ale pouziva obluk", "obsahuje halogénovy plyn, ktory predlzuje zivotnost vlakna", "pouziva LED cipy namiesto vlakna", "pracuje na nizkom napati a jednosmernom prude"],
     correctIndex: 1,
     explanation: "Halogénova ziarovka obsahuje halogénovy plyn (jod alebo brom), ktory regeneruje volframove vlakno (halogénovy cyklus) a predlzuje tak jeho zivotnost."
   },
@@ -481,7 +481,7 @@ export const elBatch2: Question[] = [
     id: 559,
     topic: "pristroje",
     question: "Istic s charakteristikou C je urceny predovsetkym pre:",
-    options: ["bytove rozvody", "obvody s motormi a transformatormi", "velmi induktivne zataze", "osvetlovacie obvody"],
+    options: ["bytove rozvody a zasuvkove obvody", "obvody s motormi a transformatormi", "velmi induktivne zataze s vysokymi prudmi", "osvetlovacie obvody a svetelne okruhy"],
     correctIndex: 1,
     explanation: "Istic C (5-10 nasobok In) je urceny pre obvody s motormi a transformatormi, kde vznikaju vysie zapínacie prudy."
   },
@@ -489,7 +489,7 @@ export const elBatch2: Question[] = [
     id: 560,
     topic: "pristroje",
     question: "Prudovy chranic (RCD/FI) chrání pred:",
-    options: ["skratom", "pretazenim", "urazom elektrickym prudom", "prepätim"],
+    options: ["skratom v silovom obvode", "pretazenim vedenia nad menovity prud", "urazom elektrickym prudom", "prepätim sposobenym bleskom"],
     correctIndex: 2,
     explanation: "Prudovy chranic detekuje rozdiel prudov medzi fazovym a nulovym vodicom (zvyskovy prud) a odpojí obvod, cim chrání pred urazom elektrickym prudom."
   },
@@ -505,7 +505,7 @@ export const elBatch2: Question[] = [
     id: 562,
     topic: "pristroje",
     question: "Stykac je elektromechanicky pristroj urceny na:",
-    options: ["meranie prudu", "spínanie velkych prudov pomocou maleho ovladacieho signalu", "ochranu pred skratom", "uzemñovanie"],
+    options: ["meranie prudu v silovych obvodoch pomocou meracieho transformatora", "spínanie velkych prudov pomocou maleho ovladacieho signalu", "ochranu pred skratom a pretazenim v elektrickom rozvode", "uzemñovanie elektrickych zariadení a ochrannych vodicov"],
     correctIndex: 1,
     explanation: "Stykac je dalkovane ovladany spínaci pristroj, ktory pomocou maleho ovladacieho prudu (civka) spína velke zaťažovacie prudy v silovych obvodoch."
   },
@@ -513,7 +513,7 @@ export const elBatch2: Question[] = [
     id: 563,
     topic: "pristroje",
     question: "Rele sa od stykaca lisi hlavne tym, ze:",
-    options: ["je vacsie", "spína mensie prudy", "nema civku", "nema kontakty"],
+    options: ["je vacsie a tazsie", "spína mensie prudy", "nema budiace civku", "nema spínacie kontakty"],
     correctIndex: 1,
     explanation: "Rele je urcene pre mensie prudy (riadiace obvody), zatial co stykac je dimenzovany na spínanie velkych prudov v silovych obvodoch."
   },
@@ -521,7 +521,7 @@ export const elBatch2: Question[] = [
     id: 564,
     topic: "pristroje",
     question: "Poistka chrání obvod pred:",
-    options: ["prepätim", "podpätim", "pretazenim a skratom", "zmenou frekvencie"],
+    options: ["prepätim v sieti", "podpätim v sieti", "pretazenim a skratom", "zmenou frekvencie siete"],
     correctIndex: 2,
     explanation: "Poistka chrání obvod pred pretazenim a skratom. Pri prekroceni menoviteho prudu sa tavny vodic prepalí a prerusí obvod."
   },
@@ -529,7 +529,7 @@ export const elBatch2: Question[] = [
     id: 565,
     topic: "pristroje",
     question: "Odpojovac sluzi na:",
-    options: ["spínanie pod zátažou", "viditelne odpojenie obvodu pre bezpecnu pracu", "regulaciu napatia", "meranie prudu"],
+    options: ["spínanie obvodu pod plnou zátažou v prevadzke", "viditelne odpojenie obvodu pre bezpecnu pracu", "regulaciu napatia v silovom rozvadzaci", "meranie prudu pomocou zabudovaneho transformatora"],
     correctIndex: 1,
     explanation: "Odpojovac vytvara viditelnu izolacnu medzeru v obvode pre bezpecnu pracu na zariadeni. Nesmie sa spínat pod zátažou."
   },
@@ -553,7 +553,7 @@ export const elBatch2: Question[] = [
     id: 568,
     topic: "pristroje",
     question: "Stupeñ krytia IP68 znamená:",
-    options: ["ochranu pred dažďom", "uplnu ochranu pred prachom a trvalym ponorenim do vody", "ochranu pred kvapkajucou vodou", "ziadnu ochranu"],
+    options: ["ochranu pred dažďom a striekajucou vodou z kazdeho smeru", "uplnu ochranu pred prachom a trvalym ponorenim do vody", "ochranu pred kvapkajucou vodou a dotykom prstov", "ziadnu ochranu pred vniknuntím vody a pevnych telies"],
     correctIndex: 1,
     explanation: "IP68: cislica 6 = uplna ochrana pred prachom, cislica 8 = ochrana pred trvalym ponorenim do vody (tlak urcí vyrobca)."
   },
@@ -561,7 +561,7 @@ export const elBatch2: Question[] = [
     id: 569,
     topic: "pristroje",
     question: "Prepäťova ochrana (zvodzic prepätia) chrání zariadenia pred:",
-    options: ["pretazenim", "skratom", "napäťovymi spickami (napr. blesk)", "podpätim"],
+    options: ["pretazenim pri vysokom odbere prudu", "skratom medzi fazou a nulovym vodicom", "napäťovymi spickami (napr. blesk)", "podpätim pri poklese napatia v sieti"],
     correctIndex: 2,
     explanation: "Prepäťova ochrana (SPD) chrání zariadenia pred krátkodobymi napäťovymi spickami sposobenymi napr. bleskom alebo spínaním v sieti."
   },
@@ -569,7 +569,7 @@ export const elBatch2: Question[] = [
     id: 570,
     topic: "pristroje",
     question: "Istic s charakteristikou D je vhodny pre:",
-    options: ["bytove rozvody", "osvetlenie", "velmi induktivne zataze (velke motory, transformatory)", "pocitacove siete"],
+    options: ["bytove rozvody a zasuvkove obvody pre domacnosti", "osvetlenie a svetelne okruhy s nizkou indukciou", "velmi induktivne zataze (velke motory, transformatory)", "pocitacove siete a komunikacne obvody v budovach"],
     correctIndex: 2,
     explanation: "Istic D (10-20 nasobok In) je urceny pre velmi induktivne zataze s vysokymi zapínacimi prudmi, ako su velke motory a transformatory."
   },
@@ -609,7 +609,7 @@ export const elBatch2: Question[] = [
     id: 575,
     topic: "pristroje",
     question: "Prva cislica v oznaceni IP urcuje ochranu pred:",
-    options: ["vodou", "pevnymi telesami a dotykom", "mechanickym narazom", "koroziou"],
+    options: ["vodou a vlhkostou prostredia", "pevnymi telesami a dotykom", "mechanickym narazom a vibráciami", "koroziou a chemickym posobením"],
     correctIndex: 1,
     explanation: "Prva cislica IP kodu urcuje stupeñ ochrany pred vniknuntim pevnych cudzích telies a pred nebezpecnym dotykom. Druha cislica urcuje ochranu pred vodou."
   },
@@ -617,7 +617,7 @@ export const elBatch2: Question[] = [
     id: 576,
     topic: "pristroje",
     question: "Iskrova medzera sa pouziva v:",
-    options: ["istici", "poistke", "prepäťovej ochrane", "prudovom chranici"],
+    options: ["istici na DIN liste", "poistke v rozvádzaci", "prepäťovej ochrane", "prudovom chranici RCD"],
     correctIndex: 2,
     explanation: "Iskrova medzera (spark gap) je jednoducha prepäťova ochrana. Pri prepätí dojde k preskoku iskry cez medzeru, cim sa zvede prepätie do zeme."
   },
@@ -626,7 +626,7 @@ export const elBatch2: Question[] = [
     id: 577,
     topic: "transformator",
     question: "Transformator pracuje na principe:",
-    options: ["termoelektrickeho javu", "piezoelektrickeho javu", "elektromagnetickej indukcie", "elektrolýzy"],
+    options: ["termoelektrickeho javu (Seebeckov)", "piezoelektrickeho javu (deformácia)", "elektromagnetickej indukcie", "elektrolýzy (chemická premena)"],
     correctIndex: 2,
     explanation: "Transformator pracuje na principe elektromagnetickej indukcie - striedavy prud v primarnom vinutí vytvara meniace sa magneticke pole, ktore indukuje napätie v sekundarnom vinutí."
   },
@@ -650,7 +650,7 @@ export const elBatch2: Question[] = [
     id: 580,
     topic: "transformator",
     question: "Straty v jadre transformatora su sposobene:",
-    options: ["odporom vinutia", "hysterezou a vírívými prudmi", "mechanickym treníím", "odporom vzduchu"],
+    options: ["odporom vinutia (Joulove straty)", "hysterezou a vírívými prudmi", "mechanickym treníím rotacnych castí", "odporom vzduchových medzier v jadre"],
     correctIndex: 1,
     explanation: "Straty v jadre (straty v zeleze) su sposobene magnetickou hysterezou a vírívými (Foucaultovymi) prudmi v feromagnetickom jadre."
   },
@@ -658,7 +658,7 @@ export const elBatch2: Question[] = [
     id: 581,
     topic: "transformator",
     question: "Straty v medi transformatora su sposobene:",
-    options: ["magnetickou hysterezou", "vírivými prudmi", "odporom vinutia (Joulove teplo)", "rozptylovym tokom"],
+    options: ["magnetickou hysterezou v jadre", "vírivými prudmi v jadre transformatora", "odporom vinutia (Joulove teplo)", "rozptylovym tokom mimo hlavneho jadra"],
     correctIndex: 2,
     explanation: "Straty v medi (straty vo vinutí) su Joulove straty sposobene prechodom prudu cez odpor vodicov vinutia: P = I^2 * R."
   },
@@ -674,7 +674,7 @@ export const elBatch2: Question[] = [
     id: 583,
     topic: "transformator",
     question: "Meranie nakratko transformatora sluzi na urcenie:",
-    options: ["strat v jadre", "strat v medi a skratoveho napatia", "prevodoveho pomeru", "magnetizacneho prudu"],
+    options: ["strat v jadre (v zeleze)", "strat v medi a skratoveho napatia", "prevodoveho pomeru vinutí", "magnetizacneho prudu naprazdno"],
     correctIndex: 1,
     explanation: "Pri meraní nakratko (sekundar je skratovany) sa na primar privadza znizene napätie. Meraju sa straty v medi a skratove napätie."
   },

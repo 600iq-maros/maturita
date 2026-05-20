@@ -54,7 +54,7 @@ export const elBatch1: Question[] = [
     id: 306,
     topic: "odpor",
     question: "Čo je supravodivosť?",
-    options: ["Odpor klesne na nulu pri veľmi nízkej teplote", "Odpor sa zvýši na nekonečno", "Vodič vedie len jednosmerný prúd", "Materiál sa stane izolantom"],
+    options: ["Odpor klesne na nulu pri veľmi nízkej teplote", "Odpor sa zvýši na nekonečno pri nízkej teplote", "Vodič vedie len jednosmerný prúd pri ochladení", "Materiál sa stane izolantom pri veľmi nízkej teplote"],
     correctIndex: 0,
     explanation: "Supravodivosť je jav, pri ktorom odpor materiálu klesne na nulu pri ochladení pod kritickú teplotu."
   },
@@ -102,7 +102,7 @@ export const elBatch1: Question[] = [
     id: 312,
     topic: "odpor",
     question: "PTC termistor sa používa najčastejšie na:",
-    options: ["Stabilizáciu napätia", "Meranie teploty a tepelnú ochranu", "Usmerňovanie prúdu", "Zosilňovanie signálu"],
+    options: ["Stabilizáciu a reguláciu napätia", "Meranie teploty a tepelnú ochranu", "Usmerňovanie striedavého prúdu", "Zosilňovanie analógového signálu"],
     correctIndex: 1,
     explanation: "PTC termistory sa bežne používajú na meranie teploty a tepelnú ochranu motorov a obvodov."
   },
@@ -224,7 +224,7 @@ export const elBatch1: Question[] = [
     id: 327,
     topic: "kirchhoff",
     question: "V paralelnom obvode sú dva rezistory. Čo platí pre napätie na nich?",
-    options: ["Napätie je rôzne na každom rezistore", "Napätie je rovnaké na oboch rezistoroch", "Napätie je nulové", "Napätie sa sčíta"],
+    options: ["Napätie je rôzne na každom rezistore", "Napätie je rovnaké na oboch rezistoroch", "Napätie je nulové na oboch rezistoroch", "Napätie sa sčíta na oboch rezistoroch"],
     correctIndex: 1,
     explanation: "V paralelnom zapojení je napätie na všetkých vetvách rovnaké."
   },
@@ -346,7 +346,7 @@ export const elBatch1: Question[] = [
     id: 342,
     topic: "striedavy",
     question: "Čo je impedancia?",
-    options: ["Odpor vodiča jednosmernému prúdu", "Celkový odpor obvodu striedavému prúdu", "Odpor kondenzátora", "Odpor cievky"],
+    options: ["Odpor vodiča jednosmernému prúdu", "Celkový odpor obvodu striedavému prúdu", "Odpor kondenzátora pri nabíjaní", "Odpor cievky pri pripojení napätia"],
     correctIndex: 1,
     explanation: "Impedancia Z je celkový odpor obvodu voči striedavému prúdu. Zahŕňa odpor R, induktívnu reaktanciu XL a kapacitnú reaktanciu XC."
   },
@@ -386,7 +386,7 @@ export const elBatch1: Question[] = [
     id: 347,
     topic: "striedavy",
     question: "Čo je cos(φ) v striedavom obvode?",
-    options: ["Pomer jalového a činného výkonu", "Účinník - pomer činného a zdanlivého výkonu", "Pomer napätia a prúdu", "Frekvencia obvodu"],
+    options: ["Pomer jalového a činného výkonu v obvode", "Účinník - pomer činného a zdanlivého výkonu", "Pomer napätia a prúdu v striedavom obvode", "Frekvencia obvodu pri záťaži na výstupe"],
     correctIndex: 1,
     explanation: "cos(φ) je účinník, vyjadruje pomer činného výkonu P k zdanlivému výkonu S: cos(φ) = P/S."
   },
@@ -402,7 +402,7 @@ export const elBatch1: Question[] = [
     id: 349,
     topic: "striedavy",
     question: "Jalový výkon sa meria v:",
-    options: ["Wattoch (W)", "Voltampéroch (VA)", "Voltampéroch reaktívnych (VAr)", "Jouloch (J)"],
+    options: ["Wattoch činných (W)", "Voltampéroch zdanlivých (VA)", "Voltampéroch reaktívnych (VAr)", "Jouloch energetických (J)"],
     correctIndex: 2,
     explanation: "Jalový výkon Q sa meria vo voltampéroch reaktívnych (VAr). Činný výkon je vo wattoch (W) a zdanlivý vo voltampéroch (VA)."
   },
@@ -458,7 +458,7 @@ export const elBatch1: Question[] = [
     id: 356,
     topic: "striedavy",
     question: "Ak je cos(φ) = 1, obvod je:",
-    options: ["Čisto induktívny", "Čisto kapacitný", "V rezonancii alebo čisto odporový", "Rozladený"],
+    options: ["Čisto induktívny s fázovým posunom", "Čisto kapacitný s predbiehaním", "V rezonancii alebo čisto odporový", "Rozladený s neznámou impedanciou"],
     correctIndex: 2,
     explanation: "cos(φ) = 1 znamená, že fázový posun je 0°. To nastane v čisto odporovom obvode alebo pri rezonancii, keď sa XL a XC navzájom vyrušia."
   },
@@ -476,7 +476,7 @@ export const elBatch1: Question[] = [
     id: 358,
     topic: "rezonancia",
     question: "Čo platí pri sériovej rezonancii?",
-    options: ["Impedancia je maximálna", "Impedancia je minimálna a rovná sa R", "Prúd je minimálny", "Napätie na záťaži je nulové"],
+    options: ["Impedancia je maximálna a rovná sa XL", "Impedancia je minimálna a rovná sa R", "Prúd je minimálny a rovná sa nule", "Napätie na záťaži je nulové pri R"],
     correctIndex: 1,
     explanation: "Pri sériovej rezonancii sa XL = XC navzájom vyrušia a impedancia klesne na minimum Z = R, prúd je maximálny."
   },
@@ -492,7 +492,7 @@ export const elBatch1: Question[] = [
     id: 360,
     topic: "rezonancia",
     question: "Činiteľ kvality Q obvodu vyjadruje:",
-    options: ["Účinnosť obvodu", "Selektivitu a ostrosť rezonančnej krivky", "Výkon obvodu", "Odpor obvodu"],
+    options: ["Účinnosť a energetické straty obvodu", "Selektivitu a ostrosť rezonančnej krivky", "Celkový výkon a príkon rezonančného obvodu", "Vnútorný odpor a impedanciu obvodu"],
     correctIndex: 1,
     explanation: "Činiteľ kvality Q vyjadruje ostrosť (selektivitu) rezonancie - čím vyšší Q, tým užšie rezonančné pásmo."
   },
@@ -524,7 +524,7 @@ export const elBatch1: Question[] = [
     id: 364,
     topic: "rezonancia",
     question: "Rezonancia v rádioprijímači slúži na:",
-    options: ["Zosilnenie signálu", "Výber požadovanej frekvencie (ladenie)", "Usmerňovanie prúdu", "Stabilizáciu napätia"],
+    options: ["Zosilnenie prijímaného signálu na výstupe", "Výber požadovanej frekvencie (ladenie)", "Usmerňovanie prúdu z antény na výstup", "Stabilizáciu napätia v prijímacom obvode"],
     correctIndex: 1,
     explanation: "Rezonančný obvod v rádioprijímači slúži na výber (ladenie) požadovanej frekvencie z mnohých signálov."
   },
@@ -540,7 +540,7 @@ export const elBatch1: Question[] = [
     id: 366,
     topic: "rezonancia",
     question: "Ako sa zmení rezonančná frekvencia, ak zdvojnásobíme kapacitu?",
-    options: ["Zdvojnásobí sa", "Zníži sa na 1/√2-násobok", "Zníži sa na polovicu", "Nezmení sa"],
+    options: ["Zdvojnásobí sa na 2-násobok", "Zníži sa na 1/√2-násobok", "Zníži sa presne na polovicu", "Nezmení sa a zostane rovnaká"],
     correctIndex: 1,
     explanation: "f₀ = 1/(2π√(LC)). Ak C zdvojnásobíme: f₀' = 1/(2π√(L*2C)) = f₀/√2 ≈ 0,707 * f₀."
   },
@@ -548,7 +548,7 @@ export const elBatch1: Question[] = [
     id: 367,
     topic: "rezonancia",
     question: "Pásmový filter prepúšťa:",
-    options: ["Len jednosmernú zložku", "Frekvencie v určitom pásme", "Len vysoké frekvencie", "Len nízke frekvencie"],
+    options: ["Len jednosmernú zložku signálu", "Frekvencie v určitom pásme", "Len vysoké frekvencie signálu", "Len nízke frekvencie signálu"],
     correctIndex: 1,
     explanation: "Pásmový filter (bandpass) prepúšťa frekvencie v určitom pásme okolo rezonančnej frekvencie a ostatné potláča."
   },
@@ -556,7 +556,7 @@ export const elBatch1: Question[] = [
     id: 368,
     topic: "rezonancia",
     question: "Horný priepust (high-pass filter) prepúšťa:",
-    options: ["Len nízke frekvencie", "Len vysoké frekvencie nad medznou frekvenciou", "Všetky frekvencie", "Len jednosmernú zložku"],
+    options: ["Len nízke frekvencie pod medznou frekvenciou", "Len vysoké frekvencie nad medznou frekvenciou", "Všetky frekvencie rovnomerne bez filtrácie", "Len jednosmernú zložku bez striedavej časti"],
     correctIndex: 1,
     explanation: "Horný priepust prepúšťa frekvencie vyššie ako medzná frekvencia a nižšie potláča."
   },
@@ -564,7 +564,7 @@ export const elBatch1: Question[] = [
     id: 369,
     topic: "rezonancia",
     question: "Dolný priepust (low-pass filter) prepúšťa:",
-    options: ["Len frekvencie nižšie ako medzná frekvencia", "Len vysoké frekvencie", "Frekvencie v úzkom pásme", "Len striedavú zložku"],
+    options: ["Len frekvencie nižšie ako medzná frekvencia", "Len vysoké frekvencie nad medznou hranicou", "Frekvencie v úzkom pásme okolo rezonancie", "Len striedavú zložku bez jednosmernej časti"],
     correctIndex: 0,
     explanation: "Dolný priepust prepúšťa frekvencie nižšie ako medzná frekvencia a vyššie potláča."
   },
@@ -572,7 +572,7 @@ export const elBatch1: Question[] = [
     id: 370,
     topic: "rezonancia",
     question: "Napätie na kondenzátore pri sériovej rezonancii môže byť:",
-    options: ["Menšie ako napätie zdroja", "Rovné napätiu zdroja", "Väčšie ako napätie zdroja (Q-krát)", "Vždy nulové"],
+    options: ["Menšie ako napätie zdroja (1/Q-krát)", "Rovné napätiu zdroja (presne 1-krát)", "Väčšie ako napätie zdroja (Q-krát)", "Vždy nulové pri rezonančnej frekvencii"],
     correctIndex: 2,
     explanation: "Pri sériovej rezonancii môže byť napätie na C (aj na L) Q-krát väčšie ako napätie zdroja - ide o rezonančné prevýšenie napätia."
   },
@@ -588,7 +588,7 @@ export const elBatch1: Question[] = [
     id: 372,
     topic: "rezonancia",
     question: "Zádrž (notch/band-stop filter) potláča:",
-    options: ["Všetky frekvencie", "Frekvencie v určitom pásme", "Len jednosmerný prúd", "Len striedavý prúd"],
+    options: ["Všetky frekvencie bez rozdielu", "Frekvencie v určitom pásme", "Len jednosmernú zložku signálu", "Len striedavú zložku signálu"],
     correctIndex: 1,
     explanation: "Zádrž (band-stop filter) potláča frekvencie v určitom pásme okolo rezonančnej frekvencie a ostatné prepúšťa."
   },
@@ -604,7 +604,7 @@ export const elBatch1: Question[] = [
     id: 374,
     topic: "rezonancia",
     question: "Piezoelektrický kryštál (kremenný rezonátor) sa používa na:",
-    options: ["Stabilizáciu frekvencie oscilátora", "Usmerňovanie prúdu", "Zosilnenie signálu", "Meranie teploty"],
+    options: ["Stabilizáciu frekvencie oscilátora", "Usmerňovanie striedavého prúdu", "Zosilnenie vysokofrekvenčného signálu", "Meranie teploty v obvode"],
     correctIndex: 0,
     explanation: "Kremenný rezonátor má veľmi vysoký činiteľ kvality (Q > 10000) a používa sa na stabilizáciu frekvencie oscilátora."
   },
@@ -612,7 +612,7 @@ export const elBatch1: Question[] = [
     id: 375,
     topic: "rezonancia",
     question: "Paralelný rezonančný obvod sa v praxi používa ako:",
-    options: ["Usmerňovač", "Záťaž zosilňovača na výber frekvencie", "Stabilizátor napätia", "Menič frekvencie"],
+    options: ["Usmerňovač striedavého napätia na jednosmerné", "Záťaž zosilňovača na výber frekvencie", "Stabilizátor napätia v napájacom zdroji", "Menič frekvencie v spínanom zdroji"],
     correctIndex: 1,
     explanation: "Paralelný rezonančný obvod s vysokou impedanciou pri rezonancii sa používa ako záťaž v ladených zosilňovačoch na výber požadovanej frekvencie."
   },
@@ -678,7 +678,7 @@ export const elBatch1: Question[] = [
     id: 383,
     topic: "kondenzator",
     question: "Čo je dielektrikum?",
-    options: ["Vodivý materiál medzi doskami", "Izolačný materiál medzi doskami kondenzátora", "Kovová doska kondenzátora", "Typ kondenzátora"],
+    options: ["Vodivý materiál medzi doskami kondenzátora", "Izolačný materiál medzi doskami kondenzátora", "Kovová doska na povrchu kondenzátora", "Typ kondenzátora s vysokou kapacitou"],
     correctIndex: 1,
     explanation: "Dielektrikum je izolačný materiál medzi doskami kondenzátora. Jeho vlastnosti ovplyvňujú kapacitu kondenzátora."
   },
@@ -694,7 +694,7 @@ export const elBatch1: Question[] = [
     id: 385,
     topic: "kondenzator",
     question: "Keramický kondenzátor sa používa hlavne na:",
-    options: ["Filtráciu sieťového napätia", "Blokovanie a odväzovanie vo vysokofrekvenčných obvodoch", "Ukladanie veľkého náboja", "Nastavovanie časovačov"],
+    options: ["Filtráciu sieťového napätia v napájacích zdrojoch", "Blokovanie a odväzovanie vo vysokofrekvenčných obvodoch", "Ukladanie veľkého náboja v záložných zdrojoch", "Nastavovanie časovačov a oneskorovacích obvodov"],
     correctIndex: 1,
     explanation: "Keramické kondenzátory majú malú kapacitu, ale výborné vysokofrekvenčné vlastnosti, preto sa používajú na blokovanie a odväzovanie."
   },
@@ -702,7 +702,7 @@ export const elBatch1: Question[] = [
     id: 386,
     topic: "kondenzator",
     question: "Kondenzátor v obvode jednosmerného prúdu po nabití:",
-    options: ["Vedie prúd stále", "Neprepúšťa jednosmerný prúd", "Skratuje obvod", "Zvyšuje prúd"],
+    options: ["Vedie jednosmerný prúd stále", "Neprepúšťa jednosmerný prúd", "Skratuje celý jednosmerný obvod", "Zvyšuje prúd v celom obvode"],
     correctIndex: 1,
     explanation: "Nabitý kondenzátor v obvode jednosmerného prúdu neprepúšťa prúd - správa sa ako rozpojený obvod."
   },
@@ -726,7 +726,7 @@ export const elBatch1: Question[] = [
     id: 389,
     topic: "kondenzator",
     question: "Kapacita doskového kondenzátora závisí od:",
-    options: ["Napätia na doskách", "Plochy dosiek, vzdialenosti a permitivity dielektrika", "Prúdu cez kondenzátor", "Teploty okolia"],
+    options: ["Napätia na doskách a prúdu v obvode", "Plochy dosiek, vzdialenosti a permitivity dielektrika", "Prúdu cez kondenzátor a frekvencie striedavého prúdu", "Teploty okolia a vlhkosti prostredia kondenzátora"],
     correctIndex: 1,
     explanation: "C = ε₀ * εr * S / d, kde S je plocha dosiek, d je vzdialenosť medzi nimi a εr je relatívna permitivita dielektrika."
   },
@@ -742,7 +742,7 @@ export const elBatch1: Question[] = [
     id: 391,
     topic: "kondenzator",
     question: "Superkondenzátor (EDLC) sa vyznačuje:",
-    options: ["Malou kapacitou a vysokým napätím", "Veľmi veľkou kapacitou (jednotky až tisíce faradov)", "Len vysokofrekvenčným použitím", "Nemožnosťou nabíjania"],
+    options: ["Malou kapacitou a veľmi vysokým menovitým napätím", "Veľmi veľkou kapacitou (jednotky až tisíce faradov)", "Len vysokofrekvenčným použitím v rezonančných obvodoch", "Nemožnosťou opakovaného nabíjania a vybíjania"],
     correctIndex: 1,
     explanation: "Superkondenzátory (EDLC) dosahujú kapacitu jednotky až tisíce faradov, ale s nízkym menovitým napätím (2,5-2,7 V)."
   },
@@ -758,7 +758,7 @@ export const elBatch1: Question[] = [
     id: 393,
     topic: "kondenzator",
     question: "Ako sa kondenzátor správa v striedavom obvode?",
-    options: ["Ako skrat", "Ako rozpojenie", "Prepúšťa striedavý prúd", "Mení frekvenciu"],
+    options: ["Ako skrat s nulovým odporom", "Ako rozpojenie bez priepustnosti", "Prepúšťa striedavý prúd", "Mení frekvenciu signálu"],
     correctIndex: 2,
     explanation: "Kondenzátor prepúšťa striedavý prúd (s určitou reaktanciou XC = 1/(2πfC)), zatiaľ čo jednosmerný prúd blokuje."
   },
@@ -766,7 +766,7 @@ export const elBatch1: Question[] = [
     id: 394,
     topic: "kondenzator",
     question: "Tantalový kondenzátor oproti elektrolytickému má:",
-    options: ["Väčšiu kapacitu", "Menšie rozmery pri rovnakej kapacite a lepšiu stabilitu", "Nižšiu cenu", "Väčšie rozmery"],
+    options: ["Väčšiu kapacitu pri rovnakých rozmeroch", "Menšie rozmery pri rovnakej kapacite a lepšiu stabilitu", "Nižšiu cenu pri rovnakých parametroch", "Väčšie rozmery ale vyššiu spoľahlivosť"],
     correctIndex: 1,
     explanation: "Tantalové kondenzátory sú menšie, stabilnejšie a spoľahlivejšie ako bežné elektrolytické, ale drahšie."
   },
@@ -816,7 +816,7 @@ export const elBatch1: Question[] = [
     id: 400,
     topic: "trojfaz",
     question: "Výkon symetrickej trojfázovej záťaže sa vypočíta ako:",
-    options: ["P = U * I * cos(φ)", "P = 3 * Uf * If * cos(φ)", "P = √3 * Uz * Iz * cos(φ)", "Obe odpovede B aj C sú správne"],
+    options: ["P = U * I * cos(φ) pre jednu fázu", "P = 3 * Uf * If * cos(φ)", "P = √3 * Uz * Iz * cos(φ)", "Obe odpovede B aj C sú správne"],
     correctIndex: 3,
     explanation: "Výkon trojfázovej záťaže: P = 3 * Uf * If * cos(φ) = √3 * Uz * Iz * cos(φ). Oba vzorce dávajú rovnaký výsledok."
   },
@@ -824,7 +824,7 @@ export const elBatch1: Question[] = [
     id: 401,
     topic: "trojfaz",
     question: "Na čo slúži nulový (neutrálny) vodič?",
-    options: ["Na prenos výkonu", "Na uzemnenie", "Na vyrovnávanie nesymetrie záťaže", "Na ochranu pred bleskom"],
+    options: ["Na prenos činného výkonu do záťaže", "Na uzemnenie elektrickej inštalácie", "Na vyrovnávanie nesymetrie záťaže", "Na ochranu pred bleskom a prepätím"],
     correctIndex: 2,
     explanation: "Nulový vodič slúži na vyrovnávanie nesymetrickej záťaže - zabezpečuje, aby fázové napätie zostalo 230 V aj pri nerovnomernom zaťažení."
   },
@@ -856,7 +856,7 @@ export const elBatch1: Question[] = [
     id: 405,
     topic: "trojfaz",
     question: "Trojfázový motor sa rozbieha prepínaním Y-Δ. Prečo?",
-    options: ["Na zvýšenie výkonu", "Na zníženie rozběhového prúdu na tretinu", "Na zvýšenie otáčok", "Na zmenu smeru otáčania"],
+    options: ["Na zvýšenie výkonu pri menovitých otáčkach", "Na zníženie rozběhového prúdu na tretinu", "Na zvýšenie otáčok nad synchronné", "Na zmenu smeru otáčania hriadeľa"],
     correctIndex: 1,
     explanation: "Rozběh Y-Δ: motor sa najprv zapojí do Y (menšie napätie na fáze, menší prúd), po rozbehnutí sa prepne do Δ pre plný výkon."
   },
@@ -864,7 +864,7 @@ export const elBatch1: Question[] = [
     id: 406,
     topic: "trojfaz",
     question: "Farby vodičov trojfázovej sústavy v SR sú:",
-    options: ["Červená, žltá, modrá + zelená", "Hnedá, čierna, sivá + modrá (N) + zelenožltá (PE)", "Biela, červená, modrá + čierna", "Červená, biela, čierna + zelená"],
+    options: ["Červená, žltá, modrá + zelená (N) + biela (PE)", "Hnedá, čierna, sivá + modrá (N) + zelenožltá (PE)", "Biela, červená, modrá + čierna (N) + zelená (PE)", "Červená, biela, čierna + zelená (N) + žltá (PE)"],
     correctIndex: 1,
     explanation: "Podľa noriem: L1 = hnedá, L2 = čierna, L3 = sivá, N = modrá, PE = zelenožltá."
   },
@@ -880,7 +880,7 @@ export const elBatch1: Question[] = [
     id: 408,
     topic: "trojfaz",
     question: "Čo sa stane pri prerušení nulového vodiča a nesymetrickej záťaži?",
-    options: ["Nič sa nezmení", "Napätia na fázach sa nevyrovnajú - niektoré stúpnu, iné klesnú", "Všetky napätia klesnú na nulu", "Prúd sa zvýši na všetkých fázach"],
+    options: ["Nič sa nezmení a obvod funguje ďalej normálne", "Napätia na fázach sa nevyrovnajú - niektoré stúpnu, iné klesnú", "Všetky napätia klesnú na nulu a obvod sa odpojí", "Prúd sa zvýši na všetkých fázach rovnomerne"],
     correctIndex: 1,
     explanation: "Pri prerušení nulového vodiča a nesymetrickej záťaži vznikne posun nulového bodu - na menej zaťažených fázach napätie stúpne (nebezpečne), na viac zaťažených klesne."
   },
@@ -896,7 +896,7 @@ export const elBatch1: Question[] = [
     id: 410,
     topic: "trojfaz",
     question: "Trojfázová sústava má oproti jednofázovej výhodu:",
-    options: ["Jednoduchšiu inštaláciu", "Vyšší prenos výkonu pri menšom priereze vodičov a konštantný okamžitý výkon", "Nižšie napätie", "Nepotrebuje transformátor"],
+    options: ["Jednoduchšiu inštaláciu a nižšie náklady na kabeláž", "Vyšší prenos výkonu pri menšom priereze vodičov a konštantný okamžitý výkon", "Nižšie napätie a tým bezpečnejšiu prevádzku spotrebičov", "Nepotrebuje transformátor ani ďalšie prístrojové vybavenie"],
     correctIndex: 1,
     explanation: "Trojfázová sústava prenáša viac výkonu pri menšom priereze vodičov a pri symetrickej záťaži má konštantný okamžitý výkon."
   },
@@ -930,7 +930,7 @@ export const elBatch1: Question[] = [
     id: 414,
     topic: "diody",
     question: "Čo je PN prechod?",
-    options: ["Spoj dvoch kovov", "Rozhranie medzi polovodičom typu P a typu N", "Spoj vodiča a izolantu", "Typ rezistora"],
+    options: ["Spoj dvoch kovov s rôznou vodivosťou", "Rozhranie medzi polovodičom typu P a typu N", "Spoj vodiča a izolantu v dióde", "Typ rezistora závislého od napätia"],
     correctIndex: 1,
     explanation: "PN prechod je rozhranie medzi polovodičom P (s dierami) a polovodičom N (s elektrónmi), tvorí základ diódy."
   },
@@ -938,7 +938,7 @@ export const elBatch1: Question[] = [
     id: 415,
     topic: "diody",
     question: "Dióda vedie prúd v:",
-    options: ["Oboch smeroch rovnako", "Priepustnom smere (anóda +, katóda -)", "Závernom smere", "Žiadnom smere"],
+    options: ["Oboch smeroch rovnako (anóda aj katóda)", "Priepustnom smere (anóda +, katóda -)", "Závernom smere (anóda -, katóda +)", "Žiadnom smere (je to izolant)"],
     correctIndex: 1,
     explanation: "Dióda vedie prúd v priepustnom smere, keď je anóda kladnejšia ako katóda (prahové napätie asi 0,6 V pre Si)."
   },
@@ -954,7 +954,7 @@ export const elBatch1: Question[] = [
     id: 417,
     topic: "diody",
     question: "Zenerova dióda sa používa na:",
-    options: ["Zosilnenie signálu", "Stabilizáciu napätia", "Usmerňovanie prúdu", "Meranie teploty"],
+    options: ["Zosilnenie analógového signálu", "Stabilizáciu napätia", "Usmerňovanie striedavého prúdu", "Meranie teploty prostredia"],
     correctIndex: 1,
     explanation: "Zenerova dióda pracuje v závernom smere pri definovanom Zenerovom napätí a používa sa na stabilizáciu napätia."
   },
@@ -986,7 +986,7 @@ export const elBatch1: Question[] = [
     id: 421,
     topic: "diody",
     question: "Fotodioda pracuje v:",
-    options: ["Priepustnom smere", "Závernom smere - záverný prúd závisí od osvetlenia", "Bez vonkajšieho napätia", "Striedavom režime"],
+    options: ["Priepustnom smere - prúd závisí od osvetlenia", "Závernom smere - záverný prúd závisí od osvetlenia", "Bez vonkajšieho napätia - generuje napätie", "Striedavom režime - mení polaritu podľa svetla"],
     correctIndex: 1,
     explanation: "Fotodioda pracuje v závernom smere. Dopadajúce svetlo generuje nositeľov náboja a zvyšuje záverný prúd."
   },
@@ -994,7 +994,7 @@ export const elBatch1: Question[] = [
     id: 422,
     topic: "diody",
     question: "Vlastný polovodič (intrinsický) je:",
-    options: ["Polovodič s prímesami", "Čistý polovodič bez prímesí", "Typ izolantu", "Typ vodiča"],
+    options: ["Polovodič s prímesami donorov", "Čistý polovodič bez prímesí", "Typ izolantu s nulovou vodivosťou", "Typ vodiča s vysokou vodivosťou"],
     correctIndex: 1,
     explanation: "Vlastný (intrinsický) polovodič je čistý materiál (napr. Si, Ge) bez prímesí. Vodivosť závisí len od teploty."
   },
@@ -1002,7 +1002,7 @@ export const elBatch1: Question[] = [
     id: 423,
     topic: "diody",
     question: "Nevlastný polovodič typu N vzniká dotovaním:",
-    options: ["Akceptorovými prímesami (napr. bór)", "Donorovými prímesami (napr. fosfor)", "Bez prímesí", "Kovovými prímesami"],
+    options: ["Akceptorovými prímesami (napr. bór)", "Donorovými prímesami (napr. fosfor)", "Bez prímesí (čistý kremík)", "Kovovými prímesami (napr. meď)"],
     correctIndex: 1,
     explanation: "Polovodič N sa vytvára dotovaním 5-mocným prvkom (napr. fosfor, arzén), ktorý dodáva voľné elektróny."
   },
@@ -1010,7 +1010,7 @@ export const elBatch1: Question[] = [
     id: 424,
     topic: "diody",
     question: "Nevlastný polovodič typu P vzniká dotovaním:",
-    options: ["Donorovými prímesami", "Akceptorovými prímesami (napr. bór)", "Iným kovom", "Izolantom"],
+    options: ["Donorovými prímesami (napr. fosfor)", "Akceptorovými prímesami (napr. bór)", "Iným kovom (napr. hliníkom)", "Izolantom (napr. oxidom kremíka)"],
     correctIndex: 1,
     explanation: "Polovodič P sa vytvára dotovaním 3-mocným prvkom (napr. bór, hliník), ktorý vytvára diery (chýbajúce elektróny)."
   },
@@ -1018,7 +1018,7 @@ export const elBatch1: Question[] = [
     id: 425,
     topic: "diody",
     question: "Schottkyho dióda má oproti bežnej kremíkovej dióde:",
-    options: ["Vyššie prahové napätie", "Nižšie prahové napätie (asi 0,2-0,3 V) a rýchlejšie spínanie", "Pomalšie spínanie", "Rovnaké vlastnosti"],
+    options: ["Vyššie prahové napätie (asi 1,0-1,2 V) a pomalšie spínanie", "Nižšie prahové napätie (asi 0,2-0,3 V) a rýchlejšie spínanie", "Pomalšie spínanie ale vyššiu prúdovú zaťažiteľnosť", "Rovnaké vlastnosti ale väčšie rozmery puzdra"],
     correctIndex: 1,
     explanation: "Schottkyho dióda má PN prechod kov-polovodič, nižšie prahové napätie (0,2-0,3 V) a veľmi rýchle spínanie."
   },
@@ -1026,7 +1026,7 @@ export const elBatch1: Question[] = [
     id: 426,
     topic: "diody",
     question: "V-A charakteristika diódy má tvar:",
-    options: ["Lineárna priamka", "Exponenciálna krivka v priepustnom smere", "Parabola", "Kruh"],
+    options: ["Lineárna priamka prechádzajúca počiatkom", "Exponenciálna krivka v priepustnom smere", "Parabola symetrická podľa osi napätia", "Kružnica so stredom v počiatku"],
     correctIndex: 1,
     explanation: "V priepustnom smere má dióda exponenciálny priebeh I-U charakteristiky. V závernom smere tečie len malý záverný prúd."
   },
@@ -1034,7 +1034,7 @@ export const elBatch1: Question[] = [
     id: 427,
     topic: "diody",
     question: "Čo sa stane, ak na kremíkovú diódu privedieme záverné napätie väčšie ako prierazné?",
-    options: ["Dióda začne normálne viesť", "Dóda sa môže zničiť prierazom", "Nič sa nestane", "Dióda sa ochladí"],
+    options: ["Dióda začne normálne viesť prúd", "Dióda sa môže zničiť prierazom", "Nič sa nestane so štruktúrou", "Dióda sa ochladí a odpor klesne"],
     correctIndex: 1,
     explanation: "Pri prekročení prierazného napätia dôjde k lavínovému prierazu - záverný prúd prudko stúpne a dióda sa môže zničiť."
   },
@@ -1050,7 +1050,7 @@ export const elBatch1: Question[] = [
     id: 429,
     topic: "diody",
     question: "LED dióda potrebuje predradný rezistor, pretože:",
-    options: ["Zvyšuje jas", "Obmedzuje prúd na bezpečnú hodnotu", "Zvyšuje napätie", "Zlepšuje farbu svetla"],
+    options: ["Zvyšuje jas LED na maximálnu úroveň", "Obmedzuje prúd na bezpečnú hodnotu", "Zvyšuje napätie na potrebnú úroveň", "Zlepšuje farbu a kvalitu svetla"],
     correctIndex: 1,
     explanation: "Predradný rezistor obmedzuje prúd cez LED na bezpečnú hodnotu. Bez neho by LED mohla byť zničená nadmerným prúdom."
   },
@@ -1058,7 +1058,7 @@ export const elBatch1: Question[] = [
     id: 430,
     topic: "diody",
     question: "Varikap je dióda, ktorej kapacita závisí od:",
-    options: ["Teploty", "Priloženého záverného napätia", "Prúdu v priepustnom smere", "Frekvencie"],
+    options: ["Teploty okolitého prostredia", "Priloženého záverného napätia", "Prúdu v priepustnom smere", "Frekvencie striedavého signálu"],
     correctIndex: 1,
     explanation: "Varikap (varikapová dióda) mení svoju kapacitu v závislosti od priloženého záverného napätia. Používa sa na elektronické ladenie."
   },
@@ -1074,7 +1074,7 @@ export const elBatch1: Question[] = [
     id: 432,
     topic: "diody",
     question: "Aká je funkcia usmerňovača?",
-    options: ["Zmena jednosmerného prúdu na striedavý", "Zmena striedavého prúdu na jednosmerný (pulzujúci)", "Zosilnenie prúdu", "Zmena frekvencie"],
+    options: ["Zmena jednosmerného prúdu na striedavý (invertovanie)", "Zmena striedavého prúdu na jednosmerný (pulzujúci)", "Zosilnenie prúdu a napätia v obvode (amplifikácia)", "Zmena frekvencie striedavého signálu (konverzia)"],
     correctIndex: 1,
     explanation: "Usmerňovač premieňa striedavý prúd na jednosmerný (pulzujúci). Na vyhladenie sa používa filtračný kondenzátor."
   },
@@ -1132,7 +1132,7 @@ export const elBatch1: Question[] = [
     id: 439,
     topic: "tranzistor",
     question: "Tyristor sa otvorí (začne viesť) po:",
-    options: ["Pripojení záverného napätia", "Privedení prúdového impulzu na gate pri kladnom napätí anóda-katóda", "Odpojení napätia", "Ochladení"],
+    options: ["Pripojení záverného napätia na anódu a katódu tyristora", "Privedení prúdového impulzu na gate pri kladnom napätí anóda-katóda", "Odpojení napätia z riadiacej elektródy a anódy tyristora", "Ochladení súčiastky pod kritickú hodnotu teploty"],
     correctIndex: 1,
     explanation: "Tyristor sa otvorí prúdovým impulzom na gate pri kladnom napätí na anóde. Po otvorení zostáva vodivý, aj keď gate signál zmizne."
   },
@@ -1140,7 +1140,7 @@ export const elBatch1: Question[] = [
     id: 440,
     topic: "tranzistor",
     question: "Ako sa vypne tyristor v jednosmernom obvode?",
-    options: ["Odpojením gate", "Znížením prúdu pod pridržiavací prúd alebo odpojením napájania", "Privedením záporného napätia na gate", "Zvýšením prúdu"],
+    options: ["Odpojením gate signálu z riadiacej elektródy", "Znížením prúdu pod pridržiavací prúd alebo odpojením napájania", "Privedením záporného napätia na gate riadiacej elektródy", "Zvýšením prúdu nad menovitú hodnotu anódového obvodu"],
     correctIndex: 1,
     explanation: "Tyristor v DC obvode sa vypne len znížením anódového prúdu pod pridržiavaciu hodnotu (napr. prerušením obvodu)."
   },
@@ -1156,7 +1156,7 @@ export const elBatch1: Question[] = [
     id: 442,
     topic: "tranzistor",
     question: "IGBT tranzistor kombinuje výhody:",
-    options: ["Diódy a rezistora", "Bipolárneho tranzistora (vysoký výkon) a MOSFETu (rýchle spínanie napätím)", "Tyristora a triaku", "Dvoch bipolárnych tranzistorov"],
+    options: ["Diódy (nízke prahové napätie) a rezistora (lineárna charakteristika)", "Bipolárneho tranzistora (vysoký výkon) a MOSFETu (rýchle spínanie napätím)", "Tyristora (vysoké blokovacie napätie) a triaku (obojsmerné spínanie)", "Dvoch bipolárnych tranzistorov (vysoké zosilnenie Darlingtonovho zapojenia)"],
     correctIndex: 1,
     explanation: "IGBT spája výhody: ovládanie napätím (ako MOSFET) a vysokú prúdovú zaťažiteľnosť s nízkym saturačným napätím (ako bipolárny tranzistor)."
   },
@@ -1164,7 +1164,7 @@ export const elBatch1: Question[] = [
     id: 443,
     topic: "tranzistor",
     question: "NPN tranzistor vedie kolektorový prúd, keď:",
-    options: ["UBE < 0", "UBE > 0 (cca 0,6 V pre Si)", "UCE = 0", "Všetky napätia sú nulové"],
+    options: ["UBE < 0 (záporné napätie)", "UBE > 0 (cca 0,6 V pre Si)", "UCE = 0 (nulové napätie)", "Všetky napätia sú nulové"],
     correctIndex: 1,
     explanation: "NPN tranzistor sa otvorí, keď napätie UBE presiahne prahové napätie (asi 0,6 V pre kremíkový tranzistor)."
   },
@@ -1180,7 +1180,7 @@ export const elBatch1: Question[] = [
     id: 445,
     topic: "tranzistor",
     question: "V akom režime pracuje tranzistor ako zosilňovač?",
-    options: ["V saturácii", "V odsekaní", "V aktívnom (lineárnom) režime", "V prieraznom režime"],
+    options: ["V saturácii (nasýtenom režime)", "V odsekaní (uzavretom režime)", "V aktívnom (lineárnom) režime", "V prieraznom (deštrukčnom) režime"],
     correctIndex: 2,
     explanation: "Ako zosilňovač pracuje tranzistor v aktívnom (lineárnom) režime, kde je IC úmerný IB s zosilnením β."
   },
@@ -1188,7 +1188,7 @@ export const elBatch1: Question[] = [
     id: 446,
     topic: "tranzistor",
     question: "Darlingtonovo zapojenie slúži na:",
-    options: ["Stabilizáciu napätia", "Zvýšenie celkového prúdového zosilnenia", "Usmerňovanie prúdu", "Zníženie odporu"],
+    options: ["Stabilizáciu výstupného napätia obvodu", "Zvýšenie celkového prúdového zosilnenia", "Usmerňovanie striedavého prúdu na jednosmerný", "Zníženie odporu v kolektorovom obvode"],
     correctIndex: 1,
     explanation: "Darlingtonovo zapojenie spojí dva tranzistory tak, že celkové zosilnenie β = β1 * β2, čím sa dosiahne veľmi vysoké zosilnenie."
   },
@@ -1196,7 +1196,7 @@ export const elBatch1: Question[] = [
     id: 447,
     topic: "tranzistor",
     question: "PNP tranzistor sa od NPN líši tým, že:",
-    options: ["Má iné vývody", "Prúdy a polarity napätí sú opačné", "Má väčšie zosilnenie", "Nemôže spínať"],
+    options: ["Má iné označenie vývodov", "Prúdy a polarity napätí sú opačné", "Má väčšie prúdové zosilnenie", "Nemôže spínať vysoké prúdy"],
     correctIndex: 1,
     explanation: "PNP tranzistor má opačné polarity napätí a smery prúdov oproti NPN. Emitor je kladnejší ako báza."
   },
@@ -1204,7 +1204,7 @@ export const elBatch1: Question[] = [
     id: 448,
     topic: "tranzistor",
     question: "Triak sa bežne používa na:",
-    options: ["Zosilnenie signálu", "Reguláciu jasu osvetlenia (stmievač)", "Usmerňovanie prúdu", "Meranie teploty"],
+    options: ["Zosilnenie analógového signálu v obvode", "Reguláciu jasu osvetlenia (stmievač)", "Usmerňovanie striedavého prúdu na jednosmerný", "Meranie teploty pomocou zmeny odporu"],
     correctIndex: 1,
     explanation: "Triak sa bežne používa v stmievačoch osvetlenia, regulátoroch otáčok a ďalších aplikáciách na reguláciu striedavého prúdu."
   },
@@ -1220,7 +1220,7 @@ export const elBatch1: Question[] = [
     id: 450,
     topic: "tranzistor",
     question: "N-kanálový MOSFET sa otvorí pri:",
-    options: ["Zápornom napätí UGS", "Kladnom napätí UGS väčšom ako prahové", "Nulvom napätí UGS", "Zápornom napätí UDS"],
+    options: ["Zápornom napätí UGS menšom ako prahové", "Kladnom napätí UGS väčšom ako prahové", "Nulovom napätí UGS na hradle gate", "Zápornom napätí UDS na draine"],
     correctIndex: 1,
     explanation: "Enhancement N-MOSFET sa otvorí, keď UGS presiahne prahové napätie Uth (typicky 2-4 V)."
   },
@@ -1228,7 +1228,7 @@ export const elBatch1: Question[] = [
     id: 451,
     topic: "tranzistor",
     question: "MOSFET oproti bipolárnemu tranzistoru má výhodu:",
-    options: ["Väčšie prúdové zosilnenie", "Veľmi vysoký vstupný odpor (prakticky nulový vstupný prúd)", "Nižšiu cenu", "Väčší výkon"],
+    options: ["Väčšie prúdové zosilnenie a nižšie saturačné napätie", "Veľmi vysoký vstupný odpor (prakticky nulový vstupný prúd)", "Nižšiu cenu a jednoduchšie zapojenie obvodov", "Väčší výkon a vyššiu prúdovú zaťažiteľnosť"],
     correctIndex: 1,
     explanation: "MOSFET má izolovaný gate, preto je vstupný odpor veľmi vysoký (10⁹ - 10¹⁴ Ω) a vstupný prúd prakticky nulový."
   },
@@ -1246,7 +1246,7 @@ export const elBatch1: Question[] = [
     id: 453,
     topic: "zdroj",
     question: "Na čo slúži filtračný kondenzátor za usmerňovačom?",
-    options: ["Na zvýšenie napätia", "Na vyhladenie pulzujúceho jednosmerného napätia", "Na zníženie prúdu", "Na ochranu pred skratom"],
+    options: ["Na zvýšenie výstupného napätia zdroja", "Na vyhladenie pulzujúceho jednosmerného napätia", "Na zníženie prúdu v záťažovom obvode", "Na ochranu pred skratom na výstupe"],
     correctIndex: 1,
     explanation: "Filtračný kondenzátor vyhladzuje pulzujúce napätie z usmerňovača - nabíja sa pri špičkách a vybíja sa medzi nimi."
   },
@@ -1254,7 +1254,7 @@ export const elBatch1: Question[] = [
     id: 454,
     topic: "zdroj",
     question: "Zenerova stabilizácia napätia funguje tak, že Zenerova dióda:",
-    options: ["Vedie prúd v priepustnom smere", "Udržiava konštantné napätie v závernom smere", "Zosilňuje napätie", "Usmerňuje prúd"],
+    options: ["Vedie prúd v priepustnom smere a stabilizuje", "Udržiava konštantné napätie v závernom smere", "Zosilňuje napätie na výstupe stabilizátora", "Usmerňuje prúd zo striedavého na jednosmerný"],
     correctIndex: 1,
     explanation: "Zenerova dióda v závernom smere udržiava na sebe konštantné Zenerovo napätie. Zmeny vstupného napätia sa kompenzujú zmenou prúdu cez Zenerovu diódu."
   },
@@ -1262,7 +1262,7 @@ export const elBatch1: Question[] = [
     id: 455,
     topic: "zdroj",
     question: "Lineárny stabilizátor oproti spínanému má:",
-    options: ["Vyššiu účinnosť", "Nižšie zvlnenie a menší šum na výstupe", "Menšie rozmery", "Nižšiu hmotnosť"],
+    options: ["Vyššiu účinnosť a menšie tepelné straty", "Nižšie zvlnenie a menší šum na výstupe", "Menšie rozmery a nižšiu hmotnosť", "Nižšiu cenu a jednoduchší návrh"],
     correctIndex: 1,
     explanation: "Lineárny stabilizátor má nižší šum a zvlnenie na výstupe, ale nižšiu účinnosť (prebytočná energia sa mení na teplo)."
   },
@@ -1278,7 +1278,7 @@ export const elBatch1: Question[] = [
     id: 457,
     topic: "zdroj",
     question: "Zvlnenie výstupného napätia zdroja sa meria ako:",
-    options: ["Jednosmerná zložka", "Striedavá zložka superponovaná na jednosmernom napätí", "Maximálne napätie", "Priemerné napätie"],
+    options: ["Jednosmerná zložka na výstupe zdroja po filtrácii", "Striedavá zložka superponovaná na jednosmernom napätí", "Maximálne napätie na výstupe zdroja pri špičke", "Priemerné napätie na záťaži za filtračným obvodom"],
     correctIndex: 1,
     explanation: "Zvlnenie (ripple) je nežiaduca striedavá zložka na výstupe zdroja, superponovaná na jednosmernom napätí."
   },
@@ -1302,7 +1302,7 @@ export const elBatch1: Question[] = [
     id: 460,
     topic: "zdroj",
     question: "Čo je dropout napätie stabilizátora?",
-    options: ["Výstupné napätie", "Minimálny rozdiel medzi vstupným a výstupným napätím pre správnu reguláciu", "Maximálne vstupné napätie", "Zvlnenie na výstupe"],
+    options: ["Výstupné napätie stabilizátora pri menovitom zaťažení obvodu", "Minimálny rozdiel medzi vstupným a výstupným napätím pre správnu reguláciu", "Maximálne vstupné napätie, ktoré stabilizátor znesie bez poškodenia", "Zvlnenie na výstupe stabilizátora spôsobené nedokonalou filtráciou"],
     correctIndex: 1,
     explanation: "Dropout napätie je minimálny rozdiel Uvst - Uvýst, pri ktorom stabilizátor ešte správne reguluje. Pre 78xx je to asi 2-3 V."
   },
@@ -1310,7 +1310,7 @@ export const elBatch1: Question[] = [
     id: 461,
     topic: "zdroj",
     question: "LDO stabilizátor sa od bežného lineárneho líši:",
-    options: ["Vyšším dropout napätím", "Veľmi nízkym dropout napätím (pod 0,5 V)", "Vyššou účinnosťou ako spínaný", "Väčšími rozmermi"],
+    options: ["Vyšším dropout napätím (nad 3 V)", "Veľmi nízkym dropout napätím (pod 0,5 V)", "Vyššou účinnosťou ako spínaný zdroj", "Väčšími rozmermi a vyšším príkonom"],
     correctIndex: 1,
     explanation: "LDO (Low Dropout) stabilizátor má veľmi nízke dropout napätie (typicky 0,1-0,5 V), preto pracuje aj s malým rozdielom vstup-výstup."
   },
@@ -1318,7 +1318,7 @@ export const elBatch1: Question[] = [
     id: 462,
     topic: "zdroj",
     question: "Ochrana proti skratu v zdroji sa realizuje pomocou:",
-    options: ["Veľkého kondenzátora", "Prúdového obmedzovača alebo poistky", "Väčšieho transformátora", "Ďalšieho stabilizátora"],
+    options: ["Veľkého filtračného kondenzátora", "Prúdového obmedzovača alebo poistky", "Väčšieho výkonového transformátora", "Ďalšieho stabilizátora v kaskáde"],
     correctIndex: 1,
     explanation: "Ochrana proti skratu sa realizuje prúdovým obmedzovačom (electronic current limiting) alebo tavnou poistkou."
   },
@@ -1342,7 +1342,7 @@ export const elBatch1: Question[] = [
     id: 465,
     topic: "zdroj",
     question: "Na vstup a výstup integrovaného stabilizátora sa pripájajú malé kondenzátory (100 nF). Prečo?",
-    options: ["Na zvýšenie napätia", "Na potlačenie vysokofrekvenčného šumu a zabránenie osciláciám", "Na meranie prúdu", "Na ochranu proti prepólovaniu"],
+    options: ["Na zvýšenie výstupného napätia stabilizátora o niekoľko voltov", "Na potlačenie vysokofrekvenčného šumu a zabránenie osciláciám", "Na meranie prúdu pretekajúceho stabilizátorom na výstupe", "Na ochranu proti prepólovaniu vstupného napätia stabilizátora"],
     correctIndex: 1,
     explanation: "Keramické kondenzátory (100 nF) na vstupe a výstupe potláčajú vysokofrekvenčný šum a zabraňujú nežiaducim osciláciám stabilizátora."
   },
@@ -1358,7 +1358,7 @@ export const elBatch1: Question[] = [
     id: 467,
     topic: "zdroj",
     question: "Spínaný zdroj pracuje na princípe:",
-    options: ["Lineárnej regulácie napätia", "Rýchleho spínania s reguláciou striedy (PWM)", "Zenerovej stabilizácie", "Odporovej regulácie"],
+    options: ["Lineárnej regulácie napätia tranzistorom", "Rýchleho spínania s reguláciou striedy (PWM)", "Zenerovej stabilizácie záverným napätím", "Odporovej regulácie predradným rezistorom"],
     correctIndex: 1,
     explanation: "Spínaný zdroj reguluje výstupné napätie zmenou striedy (duty cycle) vysokofrekvenčného spínania (PWM - pulzná šírková modulácia)."
   },
@@ -1366,7 +1366,7 @@ export const elBatch1: Question[] = [
     id: 468,
     topic: "zdroj",
     question: "Predradný rezistor Zenerovej stabilizácie slúži na:",
-    options: ["Zvýšenie výstupného napätia", "Obmedzenie prúdu a absorpciu rozdielu napätí", "Filtráciu šumu", "Meranie prúdu"],
+    options: ["Zvýšenie výstupného napätia stabilizátora", "Obmedzenie prúdu a absorpciu rozdielu napätí", "Filtráciu šumu na výstupe stabilizátora", "Meranie prúdu pretekajúceho obvodom"],
     correctIndex: 1,
     explanation: "Predradný rezistor obmedzuje prúd cez Zenerovu diódu a absorbuje rozdiel medzi vstupným a Zenerovým napätím."
   },

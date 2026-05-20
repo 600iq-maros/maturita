@@ -23,10 +23,10 @@ export const batch3: Question[] = [
     topic: "sj-lyrizovana",
     question: "Prečo dedinčania v diele Drak sa vracia považujú Draka za zlo?",
     options: [
-      "Pretože kradol dobytok",
-      "Pretože je cudzinec a nájdeniatko – je iný ako oni",
-      "Pretože podpálil kostol",
-      "Pretože utiekol z väzenia"
+      "Pretože kradol dobytok a ničil úrodu",
+      "Pretože je cudzinec a nájdeniatko",
+      "Pretože podpálil kostol a chalupy",
+      "Pretože utiekol z väzenia v meste"
     ],
     correctIndex: 1,
     explanation: "Dedinčania považujú Draka za zlo, lebo je nájdeniatko, cudzinec, odlišný od nich."
@@ -35,7 +35,7 @@ export const batch3: Question[] = [
     id: 1603,
     topic: "sj-lyrizovana",
     question: "Kto podpáli chalupu v diele Drak sa vracia?",
-    options: ["Drak", "Eva", "Šimon Jariabek", "Starý Lepiš"],
+    options: ["Drak (Martin Lepiš)", "Eva zo žiarlivosti", "Šimon Jariabek", "Starý Lepiš náhodou"],
     correctIndex: 2,
     explanation: "Šimon Jariabek podpáli chalupu, nie Drak, hoci dedinčania z podpaľačstva podozrievajú Draka."
   },
@@ -67,7 +67,7 @@ export const batch3: Question[] = [
     id: 1607,
     topic: "sj-lyrizovana",
     question: "Ako sa volá hlavná ženská postava v diele Tri gaštanové kone?",
-    options: ["Eva", "Zuna", "Zošká", "Magdaléna"],
+    options: ["Eva z dediny", "Zuna z lesa", "Zošká Lepišová", "Magdaléna"],
     correctIndex: 3,
     explanation: "Hlavná ženská postava je Magdaléna, ktorú miluje Peter."
   },
@@ -75,7 +75,7 @@ export const batch3: Question[] = [
     id: 1608,
     topic: "sj-lyrizovana",
     question: "Kto je záporná postava v diele Tri gaštanové kone?",
-    options: ["Peter", "Šimon", "Ján Zápotočný", "Libor"],
+    options: ["Peter z Podhradia", "Šimon Jariabek", "Ján Zápotočný", "Libor z horárne"],
     correctIndex: 2,
     explanation: "Ján Zápotočný je násilník, záporná postava, ktorá ubližuje Magdaléne."
   },
@@ -181,10 +181,10 @@ export const batch3: Question[] = [
     topic: "sj-lyrizovana",
     question: "Kto je Maliarička v diele Tri gaštanové kone?",
     options: [
-      "Magdalénina sestra",
-      "Petrova matka",
+      "Magdalénina staršia sestra",
+      "Petrova matka z Podhradia",
       "Postava, ktorá pomáha Magdaléne",
-      "Učiteľka z dediny"
+      "Učiteľka v dedinské škole"
     ],
     correctIndex: 2,
     explanation: "Maliarička je postava, ktorá pomáha Magdaléne v jej ťažkej situácii."

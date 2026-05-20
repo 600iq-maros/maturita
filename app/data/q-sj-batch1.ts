@@ -22,7 +22,7 @@ export const batch1: Question[] = [
     id: 1202,
     topic: "sj-starovek",
     question: "Čo Gilgameš hľadá po smrti Enkidua?",
-    options: ["Poklad bohov", "Rastlinu nesmrteľnosti", "Meč osudu", "Zlaté rúno"],
+    options: ["Poklad bohov z podsvätia", "Rastlinu nesmrteľnosti", "Meč osudu a víťazstva", "Zlaté rúno od bohyne"],
     correctIndex: 1,
     explanation: "Po smrti priateľa Enkidua sa Gilgameš vydáva hľadať rastlinu nesmrteľnosti."
   },
@@ -54,7 +54,7 @@ export const batch1: Question[] = [
     id: 1206,
     topic: "sj-starovek",
     question: "Ako sa nazýva posledná kniha Nového zákona?",
-    options: ["Genezis", "Exodus", "Apokalypsa (Zjavenie Jána)", "Žalmy"],
+    options: ["Genezis (Prvá kniha Mojžišova)", "Exodus (Druhá kniha Mojžišova)", "Apokalypsa (Zjavenie Jána)", "Žalmy (Kniha chválospevov)"],
     correctIndex: 2,
     explanation: "Posledná kniha Nového zákona je Apokalypsa, čiže Zjavenie svätého Jána."
   },
@@ -119,10 +119,10 @@ export const batch1: Question[] = [
     topic: "sj-starovek",
     question: "Čo znamená pojem kalokagatia v antickej literatúre?",
     options: [
-      "Viera v jedného boha",
+      "Viera v jedného najvyššieho boha",
       "Ideál harmónie krásy a dobra",
-      "Úcta k prírode",
-      "Oslava vojnového hrdinstva"
+      "Úcta k prírode a jej zákonom",
+      "Oslava vojnového hrdinstva a cti"
     ],
     correctIndex: 1,
     explanation: "Kalokagatia je antický ideál harmónie telesnej krásy a duševného dobra."
@@ -159,9 +159,9 @@ export const batch1: Question[] = [
     question: "Čo znamená pojem synkretizmus v stredovekej literatúre?",
     options: [
       "Splývanie literárnych druhov a žánrov",
-      "Používanie národných jazykov",
-      "Oslava individuálneho hrdinu",
-      "Návrat k antickým vzorom"
+      "Používanie národných jazykov v dielach",
+      "Oslava individuálneho hrdinu a jeho činov",
+      "Návrat k antickým vzorom a formám"
     ],
     correctIndex: 0,
     explanation: "Synkretizmus v stredovekej literatúre znamená splývanie literárnych druhov – epiky, lyriky a drámy."
@@ -170,7 +170,7 @@ export const batch1: Question[] = [
     id: 1219,
     topic: "sj-stredovek",
     question: "Koľko spevov má Danteho Božská komédia (bez úvodu)?",
-    options: ["100 spevov", "99 spevov (3 × 33)", "90 spevov", "33 spevov"],
+    options: ["100 spevov (5 × 20)", "99 spevov (3 × 33)", "90 spevov (3 × 30)", "33 spevov (1 × 33)"],
     correctIndex: 1,
     explanation: "Božská komédia má 3 × 33 = 99 spevov plus úvodný spev, spolu 100."
   },
@@ -272,9 +272,9 @@ export const batch1: Question[] = [
     question: "Čo je typickým znakom topiky v stredovekej literatúre?",
     options: [
       "Používanie ustálených motívov a obrazov",
-      "Originalita a novátorstvo",
-      "Kritika spoločnosti",
-      "Vedecký prístup k svetu"
+      "Originalita a novátorstvo v literárnej forme",
+      "Kritika spoločnosti a jej nedostatkov",
+      "Vedecký prístup k svetu a poznaniu"
     ],
     correctIndex: 0,
     explanation: "Topika znamená používanie ustálených, konvenčných motívov, tém a literárnych postupov."
@@ -367,7 +367,7 @@ export const batch1: Question[] = [
     id: 1239,
     topic: "sj-humanizmus",
     question: "Aká udalosť tvorí rámec Boccacciovho Dekameronu?",
-    options: ["Vojna", "Mor vo Florencii", "Svadobná hostina", "Púť do Ríma"],
+    options: ["Vojna medzi mestami", "Mor vo Florencii", "Svadobná hostina", "Púť do Svätej zeme"],
     correctIndex: 1,
     explanation: "Rámcom Dekameronu je mor vo Florencii, pred ktorým uteká 10 mladých ľudí na vidiek."
   },
@@ -399,7 +399,7 @@ export const batch1: Question[] = [
     id: 1243,
     topic: "sj-humanizmus",
     question: "Ako sa volá sluha Dona Quijota?",
-    options: ["Rocinante", "Sancho Panza", "Dulcinea", "Lorenzo"],
+    options: ["Rocinante", "Sancho Panza", "Dulcinea", "Don Lorenzo"],
     correctIndex: 1,
     explanation: "Sancho Panza je verný sluha (zbrojnoš) Dona Quijota."
   },
@@ -415,7 +415,7 @@ export const batch1: Question[] = [
     id: 1245,
     topic: "sj-humanizmus",
     question: "Proti čomu bojuje Don Quijote v známej scéne?",
-    options: ["Proti drakom", "Proti veterným mlynom", "Proti pirátom", "Proti obrom"],
+    options: ["Proti obrneným rytierom", "Proti veterným mlynom", "Proti pirátskej flotile", "Proti stádu býkov"],
     correctIndex: 1,
     explanation: "Don Quijote bojuje proti veterným mlynom, ktoré považuje za obrov."
   },
@@ -432,8 +432,8 @@ export const batch1: Question[] = [
     topic: "sj-humanizmus",
     question: "Ktorý znak NIE je typický pre humanizmus a renesanciu?",
     options: [
-      "Návrat k antike",
-      "Individualizmus",
+      "Návrat k antike a jej ideálom",
+      "Individualizmus a sloboda tvorby",
       "Transcendentálnosť a askéza",
       "Používanie národných jazykov"
     ],
@@ -456,9 +456,9 @@ export const batch1: Question[] = [
     question: "Aká je základná zásada klasicistickej drámy?",
     options: [
       "Jednota času, miesta a deja",
-      "Miešanie žánrov",
-      "Cit pred rozumom",
-      "Titanizmus"
+      "Miešanie žánrov a druhov",
+      "Cit pred rozumom a logikou",
+      "Titanizmus a vzdor hrdinu"
     ],
     correctIndex: 0,
     explanation: "Klasicistická dráma dodržiava tri jednoty: jednotu času, miesta a deja."
@@ -500,10 +500,10 @@ export const batch1: Question[] = [
     topic: "sj-klasicizmus",
     question: "Aká idea je ústredná v Kollárovej Slávy dcére?",
     options: [
-      "Kritika feudalizmu",
+      "Kritika feudálneho zriadenia",
       "Idea slovanskej vzájomnosti",
       "Oslava uhorského kráľovstva",
-      "Individualizmus"
+      "Individualizmus a sloboda"
     ],
     correctIndex: 1,
     explanation: "Ústrednou ideou Slávy dcéry je slovanská vzájomnosť – jednota a spolupráca Slovanov."
@@ -528,7 +528,7 @@ export const batch1: Question[] = [
     id: 1257,
     topic: "sj-klasicizmus",
     question: "Kto kodifikoval prvú podobu spisovnej slovenčiny v roku 1787?",
-    options: ["Ľudovít Štúr", "Ján Kollár", "Anton Bernolák", "Ján Hollý"],
+    options: ["Ľudovít Štúr", "Ján Kollár", "Anton Bernolák", "Pavol Jozef Šafárik"],
     correctIndex: 2,
     explanation: "Anton Bernolák v roku 1787 kodifikoval prvú podobu slovenčiny na základe západoslovenčiny."
   },
@@ -537,10 +537,10 @@ export const batch1: Question[] = [
     topic: "sj-klasicizmus",
     question: "Ktoré dielo sa považuje za prvý slovenský román?",
     options: [
-      "Slávy dcéra",
+      "Slávy dcéra od Jána Kollára",
       "René mládenca príhody a skúsenosti",
-      "Svätopluk",
-      "Dom v stráni"
+      "Svätopluk od Jána Hollého",
+      "Keď báčik z Chochoľova umrie"
     ],
     correctIndex: 1,
     explanation: "René mládenca príhody a skúsenosti od Jozefa Ignáca Bajzu je prvý slovenský román."
@@ -557,7 +557,7 @@ export const batch1: Question[] = [
     id: 1260,
     topic: "sj-klasicizmus",
     question: "Ako sa nazýva spev Slávy dcéry, kde sú potrestaní zradcovia Slovanov?",
-    options: ["Sála", "Dunaj", "Acheron", "Léthé"],
+    options: ["Sála", "Dunaj", "Acheron", "Labe"],
     correctIndex: 2,
     explanation: "V piatom speve Acheron (slovanské peklo) sú potrestaní zradcovia a odrodilci Slovanov."
   },
@@ -574,10 +574,10 @@ export const batch1: Question[] = [
     topic: "sj-klasicizmus",
     question: "Ktoré z nasledujúcich tvrdení o klasicizme je SPRÁVNE?",
     options: [
-      "Cit je nadradený rozumu",
-      "Žánre sa voľne miešajú",
+      "Cit je nadradený rozumu, dôraz na emócie",
+      "Žánre sa voľne miešajú bez pravidiel",
       "Rozum je nadradený citu, žánre sú prísne oddelené",
-      "Dôraz na národné tradície a folklór"
+      "Dôraz na národné tradície a ľudový folklór"
     ],
     correctIndex: 2,
     explanation: "V klasicizme je rozum nadradený citu a žánre sa prísne delia na vysoké a nízke."
@@ -587,10 +587,10 @@ export const batch1: Question[] = [
     topic: "sj-klasicizmus",
     question: "Aký kompozičný postup používa Hollý v epose Svätopluk?",
     options: [
-      "Chronologický postup",
-      "Retrospektívny postup",
+      "Chronologický postup (od začiatku)",
+      "Retrospektívny postup (od konca)",
       "In medias res (vstup do deja)",
-      "Rámcové rozprávanie"
+      "Rámcové rozprávanie (príbeh v príbehu)"
     ],
     correctIndex: 2,
     explanation: "Hollý používa klasický epický postup in medias res – vstup priamo do deja, s propozíciou a invokáciou."
@@ -633,7 +633,7 @@ export const batch1: Question[] = [
     id: 1268,
     topic: "sj-romantizmus-eur",
     question: "Ako sa volá krásna Cigánka v Hugovom románe?",
-    options: ["Carmen", "Esmeralda", "Cosette", "Fantine"],
+    options: ["Carmen", "Esmeralda", "Cosette", "Fantína"],
     correctIndex: 1,
     explanation: "Esmeralda je krásna Cigánka, do ktorej sa zamiluje Quasimodo aj Frollo."
   },
@@ -682,10 +682,10 @@ export const batch1: Question[] = [
     topic: "sj-romantizmus-eur",
     question: "Kto je Máša v Puškinovej Kapitánovej dcére?",
     options: [
-      "Griňovova matka",
-      "Dcéra veliteľa pevnosti, Griňovova láska",
-      "Pugačovova manželka",
-      "Cárovná"
+      "Griňovova matka a radkyňa",
+      "Dcéra veliteľa pevnosti a Griňovova láska",
+      "Pugačovova manželka a spojkyňa",
+      "Cárovná a vládkyňa Ruska"
     ],
     correctIndex: 1,
     explanation: "Máša Mironová je dcéra kapitána Mironova a Griňovova milovaná."
@@ -695,10 +695,10 @@ export const batch1: Question[] = [
     topic: "sj-romantizmus-eur",
     question: "Kto je Pugačov v Kapitánovej dcére?",
     options: [
-      "Ruský cár",
+      "Ruský cár vládnuci z Petrohradu",
       "Vodca kozáckeho povstania",
-      "Griňovov otec",
-      "Veliteľ pevnosti"
+      "Griňovov otec a bývalý dôstojník",
+      "Veliteľ pevnosti na hranici"
     ],
     correctIndex: 1,
     explanation: "Jemeljan Pugačov je vodca kozáckeho povstania, ktorý sa vydáva za cára Petra III."
@@ -720,7 +720,7 @@ export const batch1: Question[] = [
     id: 1277,
     topic: "sj-romantizmus-eur",
     question: "Kto napísal zbierku balád Kytice?",
-    options: ["Mácha", "Němcová", "Erben", "Havlíček"],
+    options: ["Mácha", "Němcová", "Erben", "Čelakovský"],
     correctIndex: 2,
     explanation: "Karel Jaromír Erben napísal zbierku balád Kytice z pověstí národních."
   },
@@ -827,9 +827,9 @@ export const batch1: Question[] = [
     question: "Čo znamená pojem mesianizmus v Bottovej tvorbe?",
     options: [
       "Viera v záchranu národa skrze utrpenie",
-      "Oslava vojenskej sily",
-      "Návrat k pohanstvu",
-      "Kritika cirkvi"
+      "Oslava vojenskej sily a dobývania",
+      "Návrat k pohanským tradíciám predkov",
+      "Kritika cirkvi a jej predstaviteľov"
     ],
     correctIndex: 0,
     explanation: "Mesianizmus je viera, že národ bude vykúpený skrze utrpenie, ako Kristus vykúpil ľudstvo."
@@ -854,7 +854,7 @@ export const batch1: Question[] = [
     id: 1291,
     topic: "sj-romantizmus-sk",
     question: "Kto je protivníkom Slovanov v Chalupkovej básni Mor ho!?",
-    options: ["Tatári", "Turci", "Cisár Konštantín (rímsky)", "Kráľ Matej"],
+    options: ["Tatársky chán", "Turecký sultán", "Cisár Konštantín (rímsky)", "Kráľ Matej Korvín"],
     correctIndex: 2,
     explanation: "V básni Mor ho! stoja Slovania proti rímskemu cisárovi Konštantínovi."
   },
@@ -904,7 +904,7 @@ export const batch1: Question[] = [
     id: 1296,
     topic: "sj-romantizmus-sk",
     question: "Ktoré Chalupkovo dielo zobrazuje únos slovenskej ženy Turkami?",
-    options: ["Mor ho!", "Likavský väzeň", "Turčín Poničan", "Branko"],
+    options: ["Mor ho!", "Likavský väzeň", "Turčín Poničan", "Branko z Hája"],
     correctIndex: 2,
     explanation: "Turčín Poničan zobrazuje príbeh Slovenky unesenej Turkami a jej túžbu po domove."
   },
@@ -913,10 +913,10 @@ export const batch1: Question[] = [
     topic: "sj-romantizmus-sk",
     question: "Ako sa nazýva motív zakliatej, utrpenej krajiny v Bottovej tvorbe?",
     options: [
-      "Titanizmus",
+      "Titanizmus a vzdor",
       "Zakliata krajina",
       "Sentimentalizmus",
-      "Byronizmus"
+      "Byronizmus a cynizmus"
     ],
     correctIndex: 1,
     explanation: "Motív zakliatej krajiny symbolizuje utláčaný slovenský národ čakajúci na vyslobodenie."
@@ -936,10 +936,10 @@ export const batch1: Question[] = [
     topic: "sj-realizmus-svet",
     question: "Aký je hlavný motív románu Otec Goriot?",
     options: [
-      "Politická intriga",
+      "Politická intriga na dvore",
       "Chorobná láska otca k dcéram",
-      "Vojnové udalosti",
-      "Náboženská kríza"
+      "Vojnové udalosti v Paríži",
+      "Náboženská kríza spoločnosti"
     ],
     correctIndex: 1,
     explanation: "Hlavným motívom je chorobná, seba-obetujúca láska otca Goriota k dcéram Anastasii a Delphine."
@@ -960,7 +960,7 @@ export const batch1: Question[] = [
       "Anna a Karenina",
       "Anastasia a Delphine",
       "Soňa a Duňa",
-      "Natáša a Heléna"
+      "Natáša a Heléna Bezuchová"
     ],
     correctIndex: 1,
     explanation: "Otec Goriot má dve dcéry – Anastasiu de Restaud a Delphine de Nucingen."
@@ -977,7 +977,7 @@ export const batch1: Question[] = [
     id: 1303,
     topic: "sj-realizmus-svet",
     question: "Kto napísal román Zločin a trest?",
-    options: ["Tolstoj", "Čechov", "Dostojevskij", "Turgenev"],
+    options: ["Tolstoj", "Gogol", "Dostojevskij", "Turgenev"],
     correctIndex: 2,
     explanation: "Fiodor Michajlovič Dostojevskij napísal psychologický román Zločin a trest."
   },
@@ -986,10 +986,10 @@ export const batch1: Question[] = [
     topic: "sj-realizmus-svet",
     question: "Ako sa volá hlavná postava románu Zločin a trest?",
     options: [
-      "Raskolnikov (Rodion)",
-      "Meršin",
-      "Karamazov",
-      "Myškin"
+      "Raskoľnikov (Rodion)",
+      "Meršin (Alexandr)",
+      "Karamazov (Dmitrij)",
+      "Myškin (Lev)"
     ],
     correctIndex: 0,
     explanation: "Rodion Raskoľnikov je chudobný študent, ktorý zavraždí úžerníčku."
@@ -999,10 +999,10 @@ export const batch1: Question[] = [
     topic: "sj-realizmus-svet",
     question: "Akú teóriu vyznáva Raskoľnikov v románe Zločin a trest?",
     options: [
-      "Teóriu evolúcie",
+      "Teóriu o nevyhnutnosti revolúcie",
       "Teóriu o silných a slabých ľuďoch",
-      "Teóriu relativity",
-      "Teóriu sociálneho darvinizmu"
+      "Teóriu o kolektívnej zodpovednosti",
+      "Teóriu o prirodzenom výbere v spoločnosti"
     ],
     correctIndex: 1,
     explanation: "Raskoľnikov verí v teóriu, že existujú silní ľudia (Napoleóny), ktorým je dovolené všetko, a slabí."
@@ -1011,7 +1011,7 @@ export const batch1: Question[] = [
     id: 1306,
     topic: "sj-realizmus-svet",
     question: "Kto privedie Raskoľnikova k pokániu a priznaniu?",
-    options: ["Porfirij", "Svidrigajlov", "Soňa Marmeládová", "Razumichin"],
+    options: ["Porfirij Petrovič", "Svidrigajlov", "Soňa Marmeládová", "Razumichin"],
     correctIndex: 2,
     explanation: "Soňa Marmeládová, zbožná dievčina, privedie Raskoľnikova k ľútosti a priznaniu."
   },
@@ -1036,10 +1036,10 @@ export const batch1: Question[] = [
     topic: "sj-realizmus-svet",
     question: "Aký typ románu je Anna Kareninová?",
     options: [
-      "Dobrodružný román",
+      "Dobrodružný román o ceste",
       "Sociálno-psychologický román",
-      "Historický román",
-      "Fantastický román"
+      "Historický román o epoche",
+      "Fantastický román s prvkami mýtu"
     ],
     correctIndex: 1,
     explanation: "Anna Kareninová je sociálno-psychologický román o spoločenských konvenciách a osobnej tragédii."
@@ -1062,10 +1062,10 @@ export const batch1: Question[] = [
     topic: "sj-realizmus-svet",
     question: "Koho zavraždí Raskoľnikov v románe Zločin a trest?",
     options: [
-      "Bankára",
-      "Úžerníčku (staru ženu požičiavajúcu peniaze)",
-      "Policajta",
-      "Svojho profesora"
+      "Bankára z Petrohradu",
+      "Úžerníčku (starú ženu)",
+      "Policajta z obvodu",
+      "Profesora z univerzity"
     ],
     correctIndex: 1,
     explanation: "Raskoľnikov zavraždí starú úžerníčku Aľonu Ivanovnu sekerou."
@@ -1092,7 +1092,7 @@ export const batch1: Question[] = [
     id: 1314,
     topic: "sj-dedinský-realizmus",
     question: "Ako sa volá hlavná postava Kukučínovho Neprebudeného?",
-    options: ["Maco Mlieč", "Ondráš Machuľa", "Ďurko Ľavko", "Mate"],
+    options: ["Maco Mlieč", "Ondráš Machuľa", "Ďurko Ľavko", "Mate Dubčík"],
     correctIndex: 1,
     explanation: "Ondráš Machuľa je hlavná postava – jednoduchý, duševne zaostalý človek."
   },
@@ -1109,10 +1109,10 @@ export const batch1: Question[] = [
     topic: "sj-dedinský-realizmus",
     question: "Ako sa volajú hlavné postavy románu Dom v stráni?",
     options: [
-      "Ondráš a Zuza",
+      "Ondráš, Zuza a Lepiš",
       "Katica, Niko a Mate",
-      "Ďurko a Žofka",
-      "Iľa a Anča"
+      "Ďurko, Žofka a Ondrej",
+      "Iľa, Anča a Kubko"
     ],
     correctIndex: 1,
     explanation: "Hlavné postavy sú Katica (Chorváta), Niko (jej milý) a Mate (Nikov otec)."
@@ -1211,8 +1211,8 @@ export const batch1: Question[] = [
     options: [
       "Prvá vlna (opisný realizmus)",
       "Druhá vlna (kritický realizmus)",
-      "Tretia vlna (naturalizmus)",
-      "Romantizmus"
+      "Tretia vlna (socialistický realizmus)",
+      "Prechodné obdobie romantizmu"
     ],
     correctIndex: 1,
     explanation: "Tajovský a Timrava patria do druhej vlny – kritického realizmu, ktorý ostrejšie kritizuje spoločnosť."
@@ -1222,10 +1222,10 @@ export const batch1: Question[] = [
     topic: "sj-dedinský-realizmus",
     question: "Ktoré Kukučínovo dielo sa zaoberá zemianstvom?",
     options: [
-      "Neprebudený",
+      "Neprebudený od Kukučína",
       "Keď báčik z Chochoľova umrie",
-      "Dom v stráni",
-      "Maco Mlieč"
+      "Dom v stráni od Kukučína",
+      "Maco Mlieč od Tajovského"
     ],
     correctIndex: 1,
     explanation: "Keď báčik z Chochoľova umrie je humoristická novela o úpadku zemianstva."
@@ -1243,10 +1243,10 @@ export const batch1: Question[] = [
     topic: "sj-dedinský-realizmus",
     question: "Čo je hlavným motívom Tajovského drámy Statky-zmätky?",
     options: [
-      "Láska a romantika",
+      "Láska a romantika na dedine",
       "Majetkové spory a chamtivosť",
-      "Národné obrodenie",
-      "Vojna a hrdinstvo"
+      "Národné obrodenie Slovákov",
+      "Vojna a hrdinstvo vojakov"
     ],
     correctIndex: 1,
     explanation: "Hlavným motívom sú majetkové spory a chamtivosť, ktoré ničia vzťahy medzi ľuďmi."

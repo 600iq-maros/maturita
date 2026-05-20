@@ -92,14 +92,23 @@ export default function Results({ score, total, wrong, onRetry }: Props) {
                   {question.question}
                 </p>
                 <div className="flex flex-col gap-2 text-sm mb-3">
-                  <div className="flex gap-2 items-start">
-                    <span className="shrink-0 rounded px-1.5 py-0.5 bg-red-500/20 text-red-400 font-mono text-xs">
-                      {String.fromCharCode(65 + selectedIndex)}
-                    </span>
-                    <span className="text-red-300 line-through">
-                      {question.options[selectedIndex]}
-                    </span>
-                  </div>
+                  {selectedIndex === -1 ? (
+                    <div className="flex gap-2 items-start">
+                      <span className="shrink-0 rounded px-1.5 py-0.5 bg-amber-500/20 text-amber-400 font-mono text-xs">
+                        E
+                      </span>
+                      <span className="text-amber-300">Neviem</span>
+                    </div>
+                  ) : (
+                    <div className="flex gap-2 items-start">
+                      <span className="shrink-0 rounded px-1.5 py-0.5 bg-red-500/20 text-red-400 font-mono text-xs">
+                        {String.fromCharCode(65 + selectedIndex)}
+                      </span>
+                      <span className="text-red-300 line-through">
+                        {question.options[selectedIndex]}
+                      </span>
+                    </div>
+                  )}
                   <div className="flex gap-2 items-start">
                     <span className="shrink-0 rounded px-1.5 py-0.5 bg-green-500/20 text-green-400 font-mono text-xs">
                       {String.fromCharCode(65 + question.correctIndex)}

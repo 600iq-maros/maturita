@@ -46,7 +46,7 @@ export const batch2: Question[] = [
     id: 1405,
     topic: "sj-hviezdoslav",
     question: "Čo urobí Hanka, keď ju Villáni napadne v Hájnikovej žene?",
-    options: ["Utečie do lesa", "Zavolá Miška", "V sebaobrane ho zabije", "Omdlie"],
+    options: ["Utečie do lesa pred ním", "Zavolá Miška na pomoc", "V sebaobrane ho zabije", "Omdlie a spadne na zem"],
     correctIndex: 2,
     explanation: "Hanka v sebaobrane zabije Artuša Villáního."
   },
@@ -94,7 +94,7 @@ export const batch2: Question[] = [
     id: 1411,
     topic: "sj-hviezdoslav",
     question: "Proti čomu protestuje Hviezdoslav v Krvavých sonetoch?",
-    options: ["Proti maďarizácii", "Proti 1. svetovej vojne", "Proti feudalizmu", "Proti cenzúre"],
+    options: ["Proti maďarizácii Slovákov", "Proti 1. svetovej vojne", "Proti feudalizmu a útlaku", "Proti cenzúre a neslobode"],
     correctIndex: 1,
     explanation: "Krvavé sonety sú protestom proti 1. svetovej vojne a jej hrôzam."
   },
@@ -102,7 +102,7 @@ export const batch2: Question[] = [
     id: 1412,
     topic: "sj-hviezdoslav",
     question: "Čo okrem vojny obžalujú Krvavé sonety?",
-    options: ["Náboženský fanatizmus", "Buržoáznu spoločnosť a jej egoizmus", "Koloniálnu politiku", "Feudálne právo"],
+    options: ["Náboženský fanatizmus a neznášanlivosť", "Buržoáznu spoločnosť a jej egoizmus", "Koloniálnu politiku a jej dôsledky", "Feudálne právo a jeho nespravodlivosť"],
     correctIndex: 1,
     explanation: "Krvavé sonety sú obžalobou buržoáznej spoločnosti, jej egoizmu, a zároveň vyjadrujú túžbu po mieri."
   },
@@ -158,7 +158,7 @@ export const batch2: Question[] = [
     id: 1419,
     topic: "sj-hviezdoslav",
     question: "Ktorý znak NIE je typický pre realizmus?",
-    options: ["Objektívnosť", "Typizácia postáv", "Subjektívne prežívanie a symboly", "Dominancia epiky"],
+    options: ["Objektívnosť a presnosť opisu", "Typizácia postáv a prostredia", "Subjektívne prežívanie a symboly", "Dominancia epiky a románového žánru"],
     correctIndex: 2,
     explanation: "Subjektívne prežívanie a symboly sú typické pre symbolizmus/modernu, nie pre realizmus."
   },
@@ -168,7 +168,7 @@ export const batch2: Question[] = [
     id: 1420,
     topic: "sj-zemianstvo",
     question: "Akého žánru je Kalinčiakova Reštavrácia?",
-    options: ["Tragédia", "Humoristicko-satirická novela", "Historický román", "Lyrická balada"],
+    options: ["Historická tragédia", "Humoristicko-satirická novela", "Sociálny román", "Lyrická balada"],
     correctIndex: 1,
     explanation: "Reštavrácia je humoristicko-satirická (parodická) novela."
   },
@@ -208,7 +208,7 @@ export const batch2: Question[] = [
     id: 1425,
     topic: "sj-zemianstvo",
     question: "Ako sa volá hlavná postava v Suchej ratolesti?",
-    options: ["Ondrej Vanovský", "Stanislav Rudopoľský", "Štefan Levický", "Gábor Vlkolínsky"],
+    options: ["Ondrej Vanovský", "Stanislav Rudopoľský", "Štefan Záhorský", "Gábor Vlkolínsky"],
     correctIndex: 1,
     explanation: "Hlavná postava je Stanislav Rudopoľský, zeman vracajúci sa na Slovensko."
   },
@@ -216,7 +216,7 @@ export const batch2: Question[] = [
     id: 1426,
     topic: "sj-zemianstvo",
     question: "Čo symbolizuje názov Suchá ratolesť?",
-    options: ["Suchú krajinu Slovenska", "Úpadok a odumieranie zemianstva", "Neúrodnú pôdu", "Stratené korene emigrantov"],
+    options: ["Suchú krajinu Slovenska a jej biedu", "Úpadok a odumieranie zemianstva", "Neúrodnú pôdu a chudobu sedliakov", "Stratené korene slovenských emigrantov"],
     correctIndex: 1,
     explanation: "Suchá ratolesť symbolizuje úpadok zemianstva — je to odumierajúca vetva národa."
   },
@@ -248,7 +248,7 @@ export const batch2: Question[] = [
     id: 1430,
     topic: "sj-zemianstvo",
     question: "Čo majú spoločné Ežo Vlkolínsky a Suchá ratolesť?",
-    options: ["Oba sú komédie", "Oba zobrazujú úpadok zemianstva", "Oba sú z 18. storočia", "Oba sa odohrávajú v Prahe"],
+    options: ["Oba sú komédie so satirickým tónom", "Oba zobrazujú úpadok zemianstva", "Oba sú z 18. storočia a jeho záveru", "Oba sa odohrávajú v českom prostredí"],
     correctIndex: 1,
     explanation: "Oba diela sa zaoberajú témou úpadku zemianstva na Slovensku."
   },
@@ -256,7 +256,7 @@ export const batch2: Question[] = [
     id: 1431,
     topic: "sj-zemianstvo",
     question: "Ako vníma Hviezdoslav riešenie krízy zemianstva v Ežovi Vlkolínskom?",
-    options: ["Návratom k feudalizmu", "Spojením zemianstva so sedliactvom", "Emigráciou zemanov", "Revolúciou"],
+    options: ["Návratom k feudálnym tradíciám", "Spojením zemianstva so sedliactvom", "Emigráciou zemanov do cudziny", "Revolúciou a zmenou poriadku"],
     correctIndex: 1,
     explanation: "Hviezdoslav vidí riešenie v spojení zemianstva so sedliactvom — symbolizuje to sobáš Eža a Žofky."
   },
@@ -264,7 +264,7 @@ export const batch2: Question[] = [
     id: 1432,
     topic: "sj-zemianstvo",
     question: "Kto je Adela Rybáričke v Suchej ratolesti?",
-    options: ["Slúžka Stanislava", "Učiteľka v dedine", "Žena, do ktorej sa Stanislav zaľúbi", "Matka hlavného hrdinu"],
+    options: ["Slúžka v Rudopoľskom kaštieli", "Učiteľka v miestnej škole", "Žena, do ktorej sa Stanislav zaľúbi", "Matka hlavného hrdinu Stanislava"],
     correctIndex: 2,
     explanation: "Adela Rybáričke je ženská postava, do ktorej sa Stanislav zaľúbi."
   },
@@ -280,7 +280,7 @@ export const batch2: Question[] = [
     id: 1434,
     topic: "sj-zemianstvo",
     question: "Kde sa odohráva dej Domu v stráni?",
-    options: ["Na Orave", "Na Liptove", "Na Jadrane (Dalmácia/Brač)", "V Bratislave"],
+    options: ["Na Orave pod Babou horou", "Na Liptove pod Tatrami", "Na Jadrane (Dalmácia/Brač)", "V Bratislave a okolí mesta"],
     correctIndex: 2,
     explanation: "Dej sa odohráva v prostredí dalmatínskeho pobrežia (ostrov Brač), kde Kukučín pôsobil."
   },
@@ -298,7 +298,7 @@ export const batch2: Question[] = [
     id: 1436,
     topic: "sj-drama",
     question: "Na čo satiricky poukazuje hra Kocúrkovo?",
-    options: ["Na zemianstvo", "Na malomestské pomery", "Na vojnu", "Na náboženské spory"],
+    options: ["Na úpadok zemianstva", "Na malomestské pomery", "Na vojnu a jej dôsledky", "Na náboženské spory"],
     correctIndex: 1,
     explanation: "Kocúrkovo je satirickým pohľadom na malomestské pomery, obmedzenosť a spiatočníctvo."
   },
@@ -314,7 +314,7 @@ export const batch2: Question[] = [
     id: 1438,
     topic: "sj-drama",
     question: "Ktoré postavy tvoria dvojicu v Palárikovom Zmierení?",
-    options: ["Grófka Elisa a Miluša", "Anička a Štefan", "Eva a Ondrej", "Hanka a Miško"],
+    options: ["Grófka Elisa a Miluša", "Anička a Štefan Levický", "Eva a Ondrej Záborský", "Hanka a Miško Čajka"],
     correctIndex: 0,
     explanation: "Grófka Elisa a Miluša si vymenia identity (dvojité inkognito)."
   },
@@ -354,7 +354,7 @@ export const batch2: Question[] = [
     id: 1443,
     topic: "sj-drama",
     question: "Kto je Eva v Bačovej žene?",
-    options: ["Matka Ondreja", "Ondrejova manželka", "Sestra bači Miša", "Dcéra farára"],
+    options: ["Matka Ondreja", "Ondrejova manželka", "Sestra bači Miša", "Dcéra miestneho farára"],
     correctIndex: 1,
     explanation: "Eva je Ondrejova manželka, ktorá zostáva sama doma."
   },
@@ -362,7 +362,7 @@ export const batch2: Question[] = [
     id: 1444,
     topic: "sj-drama",
     question: "Kto je bača Mišo v Bačovej žene?",
-    options: ["Evine otec", "Muž, ktorý si Evu zoberie počas Ondrejovej neprítomnosti", "Ondrejov brat", "Správca majetku"],
+    options: ["Evin otec a remeselník z dediny", "Muž, ktorý si Evu zoberie", "Ondrejov brat a pracovník", "Správca majetku a pozemkov"],
     correctIndex: 1,
     explanation: "Bača Mišo si zoberie Evu, keď sa Ondrej dlho nevracia z Ameriky."
   },
@@ -378,7 +378,7 @@ export const batch2: Question[] = [
     id: 1446,
     topic: "sj-drama",
     question: "Ktorý filozofický smer ovplyvnil hru Kým kohút nezaspieva?",
-    options: ["Pozitivizmus", "Existencializmus", "Marxizmus", "Pragmatizmus"],
+    options: ["Pozitivizmus", "Existencializmus", "Marxizmus", "Štrukturalizmus"],
     correctIndex: 1,
     explanation: "Hra je ovplyvnená existencializmom — postavy čelia hraničnej situácii a musia sa morálne rozhodnúť."
   },
@@ -386,7 +386,7 @@ export const batch2: Question[] = [
     id: 1447,
     topic: "sj-drama",
     question: "Kto sú Fischl a Uhrík v hre Kým kohút nezaspieva?",
-    options: ["Nemeckí vojaci", "Rukojemníci s morálnymi dilemami", "Partizáni", "Kňazi"],
+    options: ["Nemeckí vojaci na hliadke", "Rukojemníci s morálnymi dilemami", "Partizáni ukrytí v pivnici", "Kňazi z miestnej farnosti"],
     correctIndex: 1,
     explanation: "Fischl a Uhrík sú rukojemníci, ktorí sa odlišne stavajú k hraničnej situácii."
   },
@@ -394,7 +394,7 @@ export const batch2: Question[] = [
     id: 1448,
     topic: "sj-drama",
     question: "Kto je Tulák v hre Kým kohút nezaspieva?",
-    options: ["Nemecký dôstojník", "Jeden z rukojemníkov", "Partizánsky vodca", "Kňaz"],
+    options: ["Nemecký dôstojník", "Jeden z rukojemníkov", "Partizánsky vodca", "Miestny farár"],
     correctIndex: 1,
     explanation: "Tulák je jeden z desiatich rukojemníkov."
   },
@@ -402,7 +402,7 @@ export const batch2: Question[] = [
     id: 1449,
     topic: "sj-drama",
     question: "O čom je Králikova hra Posledná prekážka?",
-    options: ["O vražde na súde", "O chirurgovi Lounzovi a jeho morálnej dileme", "O vojne na fronte", "O dedinskom spore"],
+    options: ["O vražde na súde a vyšetrovaní", "O chirurgovi Lounzovi a jeho dileme", "O vojne na fronte a jej obetiach", "O dedinskom spore medzi rodinami"],
     correctIndex: 1,
     explanation: "Posledná prekážka je o chirurgovi Lounzovi, jeho vzťahu k Helene a Michalovi."
   },
@@ -410,7 +410,7 @@ export const batch2: Question[] = [
     id: 1450,
     topic: "sj-drama",
     question: "Čo je Jááánošííík od Štepku a RND?",
-    options: ["Vážna historická dráma", "Paródia, postmoderné divadlo", "Dokumentárna hra", "Muzikál"],
+    options: ["Vážna historická dráma", "Paródia, postmoderné divadlo", "Dokumentárna inscenácia", "Muzikálová veselohra"],
     correctIndex: 1,
     explanation: "Jááánošííík je paródia na mýtus Jánošíka, príklad postmoderného divadla."
   },
@@ -418,7 +418,7 @@ export const batch2: Question[] = [
     id: 1451,
     topic: "sj-drama",
     question: "Lasica a Satinský sú známi ako tvorcovia:",
-    options: ["Historických drám", "Autorského divadla a kabaretu", "Operných libriet", "Dokumentárnych filmov"],
+    options: ["Historických drám a tragédií", "Autorského divadla a kabaretu", "Operných libriet a muzikálov", "Dokumentárnych filmov a seriálov"],
     correctIndex: 1,
     explanation: "Lasica a Satinský sú tvorcami autorského divadla, známe je napr. Soirée."
   },
@@ -428,7 +428,7 @@ export const batch2: Question[] = [
     id: 1452,
     topic: "sj-lit-moderna",
     question: "Ako sa volá najznámejšia básnická zbierka Ivana Krasku?",
-    options: ["Verše", "Nox et solitudo", "Letorosty", "Žiale mládenca"],
+    options: ["Verše", "Nox et solitudo", "Letorosty", "Dumky večerní"],
     correctIndex: 1,
     explanation: "Nox et solitudo (Noc a samota) je najznámejšia zbierka Ivana Krasku."
   },
@@ -452,7 +452,7 @@ export const batch2: Question[] = [
     id: 1455,
     topic: "sj-lit-moderna",
     question: "Aké pocity prevládajú v zbierke Nox et solitudo?",
-    options: ["Radosť a optimizmus", "Smútok, samota a beznádej", "Hnev a vzdor", "Láska a šťastie"],
+    options: ["Radosť, optimizmus a nádej", "Smútok, samota a beznádej", "Hnev, vzdor a revolučnosť", "Láska, šťastie a harmónia"],
     correctIndex: 1,
     explanation: "V zbierke prevládajú pocity smútku, samoty a beznádeje."
   },
@@ -476,7 +476,7 @@ export const batch2: Question[] = [
     id: 1458,
     topic: "sj-lit-moderna",
     question: "Čo je hlavnou témou Jesenského zbierky Verše 2?",
-    options: ["Príroda a dedina", "Vplyv peňazí na spoločnosť", "Vojnová tragédia", "Detstvo a spomienky"],
+    options: ["Príroda a dedina v lete", "Vplyv peňazí na spoločnosť", "Vojnová tragédia a jej obete", "Detstvo a spomienky na mladosť"],
     correctIndex: 1,
     explanation: "Verše 2 sa zaoberajú vplyvom peňazí na ľudské vzťahy a spoločnosť."
   },
@@ -492,7 +492,7 @@ export const batch2: Question[] = [
     id: 1460,
     topic: "sj-lit-moderna",
     question: "Čím sa líši slovenský lyrický hrdina moderny od svetového?",
-    options: ["Je bohatší", "Vracia sa domov, má výčitky svedomia", "Je odvážnejší", "Žije v meste natrvalo"],
+    options: ["Je bohatší a sebavedomejší", "Vracia sa domov, má výčitky svedomia", "Je odvážnejší a radikálnejší", "Žije na okraji a odmieta spoločnosť"],
     correctIndex: 1,
     explanation: "Svetový lyrický hrdina je tulák/bohém, slovenský sa vracia domov a má výčitky, že opustil rodný kraj."
   },
@@ -516,7 +516,7 @@ export const batch2: Question[] = [
     id: 1463,
     topic: "sj-lit-moderna",
     question: "Dekadencia v literárnej moderne sa vyznačuje:",
-    options: ["Optimizmom a vierou v pokrok", "Pocitom úpadku, pesimizmom, znechutením", "Oslavou prírody a dediny", "Náboženskou mystikou"],
+    options: ["Optimizmom a vierou v spoločenský pokrok", "Pocitom úpadku, pesimizmom a znechutením", "Oslavou prírody a jednoduchého života", "Náboženskou mystikou a duchovným hľadaním"],
     correctIndex: 1,
     explanation: "Dekadencia (z franc. úpadok) sa vyznačuje pocitom úpadku, pesimizmom a znechutením zo spoločnosti."
   },
@@ -524,7 +524,7 @@ export const batch2: Question[] = [
     id: 1464,
     topic: "sj-lit-moderna",
     question: "Ivan Krasko bol pôvodným povolaním:",
-    options: ["Učiteľ", "Kňaz", "Inžinier-chemik", "Právnik"],
+    options: ["Učiteľ gymnázia", "Kňaz v obci", "Inžinier-chemik", "Právnik a advokát"],
     correctIndex: 2,
     explanation: "Ivan Krasko bol povolaním chemický inžinier."
   },
@@ -532,7 +532,7 @@ export const batch2: Question[] = [
     id: 1465,
     topic: "sj-lit-moderna",
     question: "Impresionizmus v literatúre kladie dôraz na:",
-    options: ["Presný opis reality", "Zachytenie okamžitého zmyslového dojmu", "Logickú argumentáciu", "Historické fakty"],
+    options: ["Presný opis reality a jej analýzu", "Zachytenie okamžitého zmyslového dojmu", "Logickú argumentáciu a racionalitu", "Historické fakty a ich dokumentáciu"],
     correctIndex: 1,
     explanation: "Impresionizmus sa zameriava na zachytenie okamžitého dojmu, nálady, zmyslového vnímania."
   },
@@ -550,7 +550,7 @@ export const batch2: Question[] = [
     id: 1467,
     topic: "sj-1sv-vojna",
     question: "Kto napísal román Peter a Lucia?",
-    options: ["Remarque", "Hemingway", "Romain Rolland", "Hašek"],
+    options: ["Remarque", "Hemingway", "Romain Rolland", "Barbusse"],
     correctIndex: 2,
     explanation: "Peter a Lucia napísal francúzsky spisovateľ Romain Rolland."
   },
@@ -558,7 +558,7 @@ export const batch2: Question[] = [
     id: 1468,
     topic: "sj-1sv-vojna",
     question: "Ako dlho trvá dej románu Peter a Lucia?",
-    options: ["2 týždne", "2 mesiace", "2 roky", "2 dni"],
+    options: ["2 týždne", "2 mesiace", "2 celé roky", "2 krátke dni"],
     correctIndex: 1,
     explanation: "Dej románu Peter a Lucia trvá približne 2 mesiace."
   },
@@ -574,7 +574,7 @@ export const batch2: Question[] = [
     id: 1470,
     topic: "sj-1sv-vojna",
     question: "Ako zomrú Peter a Lucia?",
-    options: ["Na fronte", "Pod zrúteným pilierom kostola", "Pri úteku z mesta", "Na chorobu"],
+    options: ["Na fronte pri bombardovaní", "Pod zrúteným pilierom kostola", "Pri úteku z mesta za mostom", "Na chorobu v nemocnici"],
     correctIndex: 1,
     explanation: "Peter a Lucia zomierajú pod pilierom kostola počas bombardovania — smrť v objatí."
   },
@@ -614,7 +614,7 @@ export const batch2: Question[] = [
     id: 1475,
     topic: "sj-1sv-vojna",
     question: "Z akého prostredia pochádza názov Na západe nič nové?",
-    options: ["Z vojenskej piesne", "Z novinového hlásenia", "Z Biblie", "Z prejavu generála"],
+    options: ["Z vojenskej ľudovej piesne", "Z novinového hlásenia", "Z biblického textu", "Z prejavu nemeckého generála"],
     correctIndex: 1,
     explanation: "Názov pochádza z novinového hlásenia — v deň Paulovej smrti noviny hlásili 'na západe nič nové'."
   },
@@ -622,7 +622,7 @@ export const batch2: Question[] = [
     id: 1476,
     topic: "sj-1sv-vojna",
     question: "Pojem 'stratená generácia' sa spája s autormi:",
-    options: ["Rolland a Hašek", "Remarque a Hemingway", "Krasko a Jesenský", "Lukáč a Smrek"],
+    options: ["Rolland a Hašek", "Remarque a Hemingway", "Krasko a Jesenský", "Lukáč a Novomeský"],
     correctIndex: 1,
     explanation: "Pojem stratená generácia (lost generation) sa spája najmä s Remarquom a Hemingwayom."
   },
@@ -654,7 +654,7 @@ export const batch2: Question[] = [
     id: 1480,
     topic: "sj-1sv-vojna",
     question: "Akým spôsobom reaguje vojak Švejk na nezmyselné rozkazy?",
-    options: ["Vzdoruje a protestuje", "Plní ich doslova, čím odhaľuje ich nezmyselnosť", "Ignoruje ich", "Dezertuje z armády"],
+    options: ["Vzdoruje a otvorene protestuje", "Plní ich doslova a tým ich zosmiešňuje", "Ignoruje ich a skrýva sa pred nimi", "Dezertuje z armády a uteká preč"],
     correctIndex: 1,
     explanation: "Švejk plní nezmyselné rozkazy doslova, čím ich zosmiešňuje — je to forma pasívneho odporu."
   },
@@ -688,7 +688,7 @@ export const batch2: Question[] = [
     id: 1484,
     topic: "sj-medzivojnova-poezia",
     question: "Čo je hlavnou témou zbierky Cválajúce dni?",
-    options: ["Vojna a utrpenie", "Mladosť, optimizmus a radosť zo života", "Smútok a samota", "Náboženská viera"],
+    options: ["Vojna, utrpenie a strata blízkych", "Mladosť, optimizmus a radosť zo života", "Smútok, samota a beznádej v meste", "Náboženská viera a duchovné hodnoty"],
     correctIndex: 1,
     explanation: "Cválajúce dni oslavujú mladosť, optimizmus a senzualizmus (radosť zo zmyslov)."
   },
@@ -696,7 +696,7 @@ export const batch2: Question[] = [
     id: 1485,
     topic: "sj-medzivojnova-poezia",
     question: "Čo znamená Smrekova zbierka Odsúdený k večitej žízni?",
-    options: ["Túžbu po alkohole", "Nekonečnú túžbu po živote a láske", "Smäd po poznaní", "Trest za hriech"],
+    options: ["Túžbu po alkohole a zábudlivosti", "Nekonečnú túžbu po živote a láske", "Smäd po poznaní a múdrosti sveta", "Trest za hriech a ľudskú slabosť"],
     correctIndex: 1,
     explanation: "Názov vyjadruje vitalistickú nekonečnú túžbu po živote, láske a kráse."
   },
@@ -704,7 +704,7 @@ export const batch2: Question[] = [
     id: 1486,
     topic: "sj-medzivojnova-poezia",
     question: "Emil Boleslav Lukáč patrí k smeru:",
-    options: ["Vitalizmus", "Nadrealizmus", "Neosymbolizmus", "Realizmus"],
+    options: ["Vitalizmus", "Nadrealizmus", "Neosymbolizmus", "Expresionizmus"],
     correctIndex: 2,
     explanation: "Lukáč je predstaviteľom neosymbolizmu v medzivojnovej poézii."
   },
@@ -744,7 +744,7 @@ export const batch2: Question[] = [
     id: 1491,
     topic: "sj-medzivojnova-poezia",
     question: "Ladislav Novomeský patril k skupine:",
-    options: ["Katolíckej moderny", "Avantgardnej ľavicovej poézie (DAV)", "Neosymbolizmu", "Vitalizmu"],
+    options: ["Katolíckej moderny a jej okruhu", "Avantgardnej ľavicovej poézie (DAV)", "Neosymbolizmu a jeho poetiky", "Vitalizmu a jeho prúdenia"],
     correctIndex: 1,
     explanation: "Novomeský patril k ľavicovej avantgardnej skupine DAV."
   },
@@ -800,7 +800,7 @@ export const batch2: Question[] = [
     id: 1498,
     topic: "sj-medzivojnova-poezia",
     question: "Čomu slúžila tvorba katolíckej moderny?",
-    options: ["Revolúcii a triednenmu boju", "Službe Bohu, cirkvi a národu", "Propagácii ateizmu", "Ľavicovej politike"],
+    options: ["Revolúcii a triednemu boju", "Službe Bohu, cirkvi a národu", "Propagácii ateizmu a vedy", "Ľavicovej politike a davizmu"],
     correctIndex: 1,
     explanation: "Katolícka moderna bola zameraná na službu Bohu, cirkvi a národu."
   },
@@ -810,7 +810,7 @@ export const batch2: Question[] = [
     id: 1499,
     topic: "sj-medzivojnova-proza",
     question: "Kto napísal román Jozef Mak?",
-    options: ["Urban", "Jégé", "Hronský", "Kukučín"],
+    options: ["Milo Urban", "Jégé", "Hronský", "Kukučín"],
     correctIndex: 2,
     explanation: "Jozef Mak napísal Jozef Cíger Hronský."
   },
@@ -818,7 +818,7 @@ export const batch2: Question[] = [
     id: 1500,
     topic: "sj-medzivojnova-proza",
     question: "Aký typ románu je Jozef Mak?",
-    options: ["Historický", "Dobrodružný", "Sociálno-psychologický", "Detektívny"],
+    options: ["Historický román", "Dobrodružný román", "Sociálno-psychologický", "Pikareskný román"],
     correctIndex: 2,
     explanation: "Jozef Mak je sociálno-psychologický román."
   },
@@ -826,7 +826,7 @@ export const batch2: Question[] = [
     id: 1501,
     topic: "sj-medzivojnova-proza",
     question: "Ako možno charakterizovať Jozefa Maka ako postavu?",
-    options: ["Rebel a revolucionár", "Fatalistický, trpezlivý a pokorný", "Ambiciózny a ctižiadostivý", "Veselý a bezstarostný"],
+    options: ["Rebel, revolucionár a búrlivák", "Fatalistický, trpezlivý a pokorný", "Ambiciózny, ctižiadostivý a cieľavedomý", "Veselý, bezstarostný a optimistický"],
     correctIndex: 1,
     explanation: "Jozef Mak je fatalistická postava — prijíma svoj osud s trpezlivosťou a pokorou."
   },
@@ -842,7 +842,7 @@ export const batch2: Question[] = [
     id: 1503,
     topic: "sj-medzivojnova-proza",
     question: "Aký je rodinný status Jozefa Maka?",
-    options: ["Prvorodený syn", "Nemanželský syn", "Sirota", "Adoptovaný"],
+    options: ["Prvorodený syn", "Nemanželský syn", "Sirota z útulku", "Adoptovaný chlapec"],
     correctIndex: 1,
     explanation: "Jozef Mak je nemanželský syn, čo ho spoločensky znevýhodňuje."
   },
@@ -874,7 +874,7 @@ export const batch2: Question[] = [
     id: 1507,
     topic: "sj-medzivojnova-proza",
     question: "Ako sa volajú dve časti románu Živý bič?",
-    options: ["Vojna a Mier", "Stratené ruky a Adam Hlavaj", "Odchod a Návrat", "Dedina a Mesto"],
+    options: ["Vojna a Mier na dedine", "Stratené ruky a Adam Hlavaj", "Odchod mužov a ich Návrat", "Dedina pred vojnou a po nej"],
     correctIndex: 1,
     explanation: "Živý bič má dve časti: Stratené ruky a Adam Hlavaj."
   },
@@ -882,7 +882,7 @@ export const batch2: Question[] = [
     id: 1508,
     topic: "sj-medzivojnova-proza",
     question: "Kto je Eva v románe Živý bič?",
-    options: ["Matka Adama Hlavaja", "Žena, ktorú znásilní notár Okolický", "Sestra hlavného hrdinu", "Učiteľka v dedine"],
+    options: ["Matka Adama Hlavaja a vdova", "Žena, ktorú zneužije notár", "Sestra hlavného hrdinu Adama", "Učiteľka v dedinské škole"],
     correctIndex: 1,
     explanation: "Eva je žena, ktorú zneužije notár Okolický, čo vyvolá dramatické udalosti."
   },
@@ -890,7 +890,7 @@ export const batch2: Question[] = [
     id: 1509,
     topic: "sj-medzivojnova-proza",
     question: "Kto je notár Okolický v románe Živý bič?",
-    options: ["Kladná postava, ochranca dediny", "Záporná postava, predstaviteľ moci", "Farár", "Vojak na fronte"],
+    options: ["Kladná postava, ochranca dediny", "Záporná postava, predstaviteľ moci", "Farár pôsobiaci v dedine", "Vojak, ktorý sa vrátil z frontu"],
     correctIndex: 1,
     explanation: "Notár Okolický je záporná postava, predstaviteľ moci, ktorý zneužíva svoje postavenie."
   },
@@ -898,7 +898,7 @@ export const batch2: Question[] = [
     id: 1510,
     topic: "sj-medzivojnova-proza",
     question: "Ako sa končí román Živý bič?",
-    options: ["Mierovou dohodou", "Živelnou vzburou dedinčanov", "Emigráciou postáv", "Súdnym procesom"],
+    options: ["Mierovou dohodou medzi stranami", "Živelnou vzburou dedinčanov", "Emigráciou postáv do Ameriky", "Súdnym procesom s notárom"],
     correctIndex: 1,
     explanation: "Román sa končí živelnou vzburou dedinčanov proti útlaku."
   },
@@ -922,7 +922,7 @@ export const batch2: Question[] = [
     id: 1513,
     topic: "sj-medzivojnova-proza",
     question: "Ktorý znak NIE je typický pre lyrizovanú prózu?",
-    options: ["Prírodné prostredie", "Rozprávkové prvky", "Objektívna analýza spoločnosti", "Mytologické motívy"],
+    options: ["Prírodné prostredie a symbolika", "Rozprávkové a ľudové prvky", "Objektívna analýza spoločnosti", "Mytologické a archetypálne motívy"],
     correctIndex: 2,
     explanation: "Objektívna analýza spoločnosti je typická pre realizmus, nie pre lyrizovanú prózu."
   },
@@ -954,7 +954,7 @@ export const batch2: Question[] = [
     id: 1517,
     topic: "sj-medzivojnova-proza",
     question: "Čo symbolizuje názov Živý bič?",
-    options: ["Doslovný bič, ktorým bili vojakov", "Vojnu ako trest, ktorý bičuje ľudí", "Rýchle kone na fronte", "Revolučné hnutie"],
+    options: ["Doslovný bič na trestanie vojakov", "Vojnu ako trest, ktorý bičuje ľudí", "Rýchle kone bežiace na vojnový front", "Revolučné hnutie na slovenskom vidieku"],
     correctIndex: 1,
     explanation: "Živý bič symbolizuje vojnu ako trest, metlu, ktorá bičuje a ničí životy obyčajných ľudí."
   },
@@ -962,7 +962,7 @@ export const batch2: Question[] = [
     id: 1518,
     topic: "sj-medzivojnova-proza",
     question: "Jozef Mak je pre slovenskú literatúru dôležitý ako:",
-    options: ["Prvý detektívny román", "Jeden z najvýznamnejších sociálno-psychologických románov", "Prvý historický román", "Prvý román napísaný v slovenčine"],
+    options: ["Prvý detektívny román v slovenskej literatúre", "Jeden z najvýznamnejších sociálno-psychologických románov", "Prvý historický román napísaný po slovensky", "Prvý naturistický román z vidieckeho prostredia"],
     correctIndex: 1,
     explanation: "Jozef Mak je považovaný za jeden z najvýznamnejších sociálno-psychologických románov slovenskej literatúry."
   },
@@ -992,7 +992,7 @@ export const batch2: Question[] = [
     id: 1521,
     topic: "sj-drama",
     question: "Čo je Soirée od Lasicu a Satinského?",
-    options: ["Opera", "Autorské kabaretné predstavenie", "Historická dráma", "Rozprávka"],
+    options: ["Operná inscenácia pre divadlo", "Autorské kabaretné predstavenie", "Historická dráma z dejín Slovenska", "Rozprávková hra pre deti"],
     correctIndex: 1,
     explanation: "Soirée je autorské kabaretné divadelné predstavenie Lasicu a Satinského."
   },
@@ -1000,7 +1000,7 @@ export const batch2: Question[] = [
     id: 1522,
     topic: "sj-drama",
     question: "Akú tému rieši Bačova žena?",
-    options: ["Politickú korupciu", "Osobnú tragédiu spôsobenú emigráciou", "Vojnový konflikt", "Náboženský spor"],
+    options: ["Politickú korupciu na dedine", "Osobnú tragédiu spôsobenú emigráciou", "Vojnový konflikt a jeho dopady", "Náboženský spor medzi rodinami"],
     correctIndex: 1,
     explanation: "Bačova žena rieši osobnú tragédiu spôsobenú odchodom Ondreja do Ameriky."
   },
@@ -1010,7 +1010,7 @@ export const batch2: Question[] = [
     id: 1523,
     topic: "sj-1sv-vojna",
     question: "Aký žáner je román Osudy dobrého vojáka Švejka?",
-    options: ["Tragický vojnový román", "Humoristický protivojnový román", "Historická kronika", "Autobiografia"],
+    options: ["Tragický vojnový román o strate", "Humoristický protivojnový román", "Historická kronika vojnových udalostí", "Autobiografia vojaka na fronte"],
     correctIndex: 1,
     explanation: "Švejk je humoristický protivojnový román."
   },
@@ -1020,7 +1020,7 @@ export const batch2: Question[] = [
     id: 1524,
     topic: "sj-medzivojnova-poezia",
     question: "Vitalizmus sa vyznačuje:",
-    options: ["Pesimizmom a beznádejou", "Oslavou života, mladosti a zmyslov", "Náboženskými témami", "Spoločenskou kritikou"],
+    options: ["Pesimizmom, beznádejou a smútkom", "Oslavou života, mladosti a zmyslov", "Náboženskými témami a duchovnosťou", "Spoločenskou kritikou a satirou"],
     correctIndex: 1,
     explanation: "Vitalizmus oslavuje život, mladosť, zmyslovosť a radosť z bytia."
   },
@@ -1030,7 +1030,7 @@ export const batch2: Question[] = [
     id: 1525,
     topic: "sj-medzivojnova-proza",
     question: "Ako reaguje Jozef Mak na nepriazeň osudu?",
-    options: ["Búri sa a bojuje", "Trpezlivo znáša utrpenie", "Uteká do cudziny", "Hľadá pomstu"],
+    options: ["Búri sa a aktívne bojuje", "Trpezlivo znáša utrpenie", "Uteká do cudziny za prácou", "Hľadá pomstu na vinníkoch"],
     correctIndex: 1,
     explanation: "Jozef Mak trpezlivo a pokorne znáša nepriazeň osudu — je fatalistická postava."
   },
@@ -1038,7 +1038,7 @@ export const batch2: Question[] = [
     id: 1526,
     topic: "sj-medzivojnova-proza",
     question: "Kto je Adam Hlavaj v románe Živý bič?",
-    options: ["Notár", "Vojak, ktorý sa vráti z frontu a vedie vzburu", "Farár", "Lekár"],
+    options: ["Notár pôsobiaci v dedine", "Vojak vracajúci sa z frontu", "Farár slúžiaci v kostole", "Lekár liečiaci v nemocnici"],
     correctIndex: 1,
     explanation: "Adam Hlavaj je vojak, ktorý sa vracia z frontu a stáva sa vodcom živelnej vzbury."
   },
@@ -1046,7 +1046,7 @@ export const batch2: Question[] = [
     id: 1527,
     topic: "sj-medzivojnova-proza",
     question: "Čo znamená 'stratené ruky' v prvej časti Živého biča?",
-    options: ["Fyzicky stratené ruky vojakov", "Stratené pracovné sily — muži odvedení na vojnu", "Neschopnosť písať", "Stratené dokumenty"],
+    options: ["Fyzicky stratené ruky vojakov na fronte", "Stratené pracovné sily, muži na vojnu", "Neschopnosť písať listy domov z frontu", "Stratené dokumenty o majetkoch dediny"],
     correctIndex: 1,
     explanation: "Stratené ruky symbolizujú mužov odvedených na front — dedina stratila pracovné sily."
   },
@@ -1056,7 +1056,7 @@ export const batch2: Question[] = [
     id: 1528,
     topic: "sj-zemianstvo",
     question: "Vajanský v Suchej ratolesti verí v obnovu zemianstva prostredníctvom:",
-    options: ["Revolúcie", "Návratu zemianstva k národným hodnotám", "Emigrácie", "Spojenectva s Maďarmi"],
+    options: ["Revolúcie a zmeny spoločenského poriadku", "Návratu zemianstva k národným hodnotám", "Emigrácie do zahraničia za lepším životom", "Spojenectva s Maďarmi a ich politikou"],
     correctIndex: 1,
     explanation: "Vajanský veril, že návrat zemianstva k slovenským národným hodnotám môže obnoviť jeho silu."
   },
@@ -1072,7 +1072,7 @@ export const batch2: Question[] = [
     id: 1530,
     topic: "sj-zemianstvo",
     question: "Aký postoj má Kukučín k zemianstvu v Dome v stráni?",
-    options: ["Idealizuje ho", "Kriticky zobrazuje rozpor medzi zemianmi a sedliakmi", "Ignoruje ho", "Oslavuje ho"],
+    options: ["Idealizuje ho a obdivuje jeho tradície", "Kriticky zobrazuje rozpory zemanov", "Ignoruje ho a zameriava sa na sedliakov", "Oslavuje ho ako základ národa"],
     correctIndex: 1,
     explanation: "Kukučín kriticky zobrazuje rozpory medzi zemianskou a sedliackou vrstvou."
   },

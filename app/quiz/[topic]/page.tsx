@@ -43,7 +43,7 @@ export default function QuizPage() {
 
   const [pool, setPool] = useState<Question[]>([]);
   const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
+  const [selected, setSelected] = useState<number | null>(null); // -1 = neviem
   const [score, setScore] = useState(0);
   const [wrong, setWrong] = useState<{ question: Question; selectedIndex: number }[]>([]);
   const [done, setDone] = useState(false);
@@ -95,7 +95,7 @@ export default function QuizPage() {
   function handleSelect(optIdx: number) {
     if (selected !== null) return;
     setSelected(optIdx);
-    const isCorrect = optIdx === current.correctIndex;
+    const isCorrect = optIdx >= 0 && optIdx === current.correctIndex;
 
     if (isCorrect) {
       const newStreak = Math.min(streak + 1, 10);
@@ -162,7 +162,8 @@ export default function QuizPage() {
 
   const progress = ((index + 1) / pool.length) * 100;
   const isAnswered = selected !== null;
-  const isCorrect = selected === current.correctIndex;
+  const isNeviem = selected === -1;
+  const isCorrect = !isNeviem && selected === current.correctIndex;
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
@@ -242,7 +243,7 @@ export default function QuizPage() {
         )}
 
         {/* Options */}
-        <div className="flex flex-col gap-3 mb-6">
+        <div className="flex flex-col gap-3 mb-3">
           {current.options.map((option, i) => {
             let style =
               "rounded-xl border border-gray-800 bg-gray-900 hover:bg-gray-800 hover:border-gray-700 cursor-pointer transition-all duration-150";
@@ -300,6 +301,39 @@ export default function QuizPage() {
           })}
         </div>
 
+        {/* Neviem button */}
+        <div className="mb-6">
+          <button
+            onClick={() => handleSelect(-1)}
+            disabled={isAnswered}
+            className={`w-full text-left p-4 flex items-center gap-4 rounded-xl transition-all duration-150 ${
+              isAnswered
+                ? isNeviem
+                  ? "border border-amber-500/60 bg-amber-500/10 cursor-default"
+                  : "border border-gray-800 bg-gray-900 opacity-50 cursor-default"
+                : "border border-dashed border-gray-700 bg-gray-900/50 hover:bg-gray-800 hover:border-amber-500/40 cursor-pointer"
+            }`}
+          >
+            <span
+              className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold transition-colors ${
+                isAnswered && isNeviem
+                  ? "bg-amber-500/20 text-amber-400"
+                  : "bg-gray-800 text-gray-500"
+              }`}
+            >
+              E
+            </span>
+            <span className={`text-base leading-snug ${
+              isAnswered && isNeviem ? "text-amber-300" : "text-gray-500"
+            }`}>
+              Neviem
+            </span>
+            {isAnswered && isNeviem && (
+              <span className="ml-auto text-amber-400 text-xl">🤷</span>
+            )}
+          </button>
+        </div>
+
         {/* Explanation + next */}
         {isAnswered && (
           <div className="animate-fade-in">
@@ -312,6 +346,8 @@ export default function QuizPage() {
                     : streak >= 5
                     ? "bg-yellow-500/15 border border-yellow-500/40 text-yellow-300"
                     : "bg-green-500/10 border border-green-500/30 text-green-300"
+                  : isNeviem
+                  ? "bg-amber-500/10 border border-amber-500/30 text-amber-300"
                   : "bg-red-500/10 border border-red-500/30 text-red-300"
               } ${isCorrect && streak >= 3 ? "animate-correct-flash" : ""}`}
             >
@@ -325,20 +361,41 @@ export default function QuizPage() {
                   : streak >= 3
                   ? "✨ Správne!"
                   : "✓ Správne!"
+                : isNeviem
+                ? "🤷 Neviem — pozri sa na správnu odpoveď"
                 : "✗ Nesprávne!"}
             </div>
+
+            {/* Teaching box for neviem */}
+            {isNeviem && (
+              <div className="rounded-xl bg-green-500/5 border border-green-500/30 px-4 py-3 mb-4">
+                <span className="font-semibold uppercase text-xs tracking-widest block mb-2 text-green-500/70">
+                  Správna odpoveď
+                </span>
+                <div className="flex items-center gap-3">
+                  <span className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold bg-green-500/20 text-green-400">
+                    {LETTERS[current.correctIndex]}
+                  </span>
+                  <span className="text-green-300 text-base font-medium">
+                    {current.options[current.correctIndex]}
+                  </span>
+                </div>
+              </div>
+            )}
 
             {/* Explanation */}
             {current.explanation && (
               <div className={`rounded-xl bg-gray-900 border px-4 py-3 mb-5 text-sm leading-relaxed ${
                 isCorrect
                   ? "border-green-500/20 text-gray-400"
+                  : isNeviem
+                  ? "border-amber-500/20 text-gray-300"
                   : "border-red-500/20 text-gray-400"
               }`}>
                 <span className={`font-semibold uppercase text-xs tracking-widest block mb-1 ${
-                  isCorrect ? "text-green-500/70" : "text-red-500/70"
+                  isCorrect ? "text-green-500/70" : isNeviem ? "text-amber-500/70" : "text-red-500/70"
                 }`}>
-                  Vysvetlenie
+                  {isNeviem ? "Prečo je to správna odpoveď?" : "Vysvetlenie"}
                 </span>
                 {current.explanation}
               </div>
