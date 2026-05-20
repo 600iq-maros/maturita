@@ -116,6 +116,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     saveUsers(users);
     setUser({ ...u });
     setAllUsers([...users]);
+
+    // Sync to shared leaderboard (fire-and-forget)
+    fetch('/api/leaderboard', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: u.username,
+        totalAnswered: u.stats.totalAnswered,
+        totalCorrect: u.stats.totalCorrect,
+        bestStreak: u.stats.bestStreak,
+      }),
+    }).catch(() => {});
   }, [user?.username]);
 
   if (!loaded) return null;

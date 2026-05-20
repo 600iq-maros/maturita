@@ -2,28 +2,46 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useAuth } from "../lib/auth";
 
 const MEDAL = ['🥇', '🥈', '🥉'];
 
+type LeaderboardEntry = {
+  username: string;
+  totalAnswered: number;
+  totalCorrect: number;
+  bestStreak: number;
+};
+
 export default function LeaderboardPage() {
-  const { user, allUsers, refreshUsers } = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
+  const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchLeaderboard = useCallback(async () => {
+    try {
+      const res = await fetch('/api/leaderboard');
+      if (res.ok) {
+        setEntries(await res.json());
+      }
+    } catch {
+      // Fallback: show nothing
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     if (!user) router.replace('/login');
-    else refreshUsers();
-  }, [user, router, refreshUsers]);
+    else fetchLeaderboard();
+  }, [user, router, fetchLeaderboard]);
 
   if (!user) return null;
 
-  const sorted = [...allUsers]
-    .filter(u => u.stats.totalAnswered > 0)
-    .sort((a, b) => b.stats.totalCorrect - a.stats.totalCorrect || b.stats.bestStreak - a.stats.bestStreak);
-
-  const totalAnswered = allUsers.reduce((s, u) => s + u.stats.totalAnswered, 0);
-  const totalCorrect = allUsers.reduce((s, u) => s + u.stats.totalCorrect, 0);
+  const totalAnswered = entries.reduce((s, u) => s + u.totalAnswered, 0);
+  const totalCorrect = entries.reduce((s, u) => s + u.totalCorrect, 0);
   const totalAccuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
   return (
@@ -53,16 +71,21 @@ export default function LeaderboardPage() {
         </div>
       </div>
 
-      {sorted.length === 0 ? (
+      {loading ? (
+        <div className="text-center text-gray-500 py-12">
+          <div className="text-4xl mb-3 animate-pulse">📊</div>
+          <p>Načítavam rebríček…</p>
+        </div>
+      ) : entries.length === 0 ? (
         <div className="text-center text-gray-500 py-12">
           <div className="text-4xl mb-3">📊</div>
           <p>Zatiaľ žiadne výsledky. Začni kvíz!</p>
         </div>
       ) : (
         <div className="flex flex-col gap-3">
-          {sorted.map((u, i) => {
-            const pct = u.stats.totalAnswered > 0
-              ? Math.round((u.stats.totalCorrect / u.stats.totalAnswered) * 100)
+          {entries.map((u, i) => {
+            const pct = u.totalAnswered > 0
+              ? Math.round((u.totalCorrect / u.totalAnswered) * 100)
               : 0;
             const isMe = u.username === user.username;
 
@@ -91,12 +114,12 @@ export default function LeaderboardPage() {
                     )}
                   </div>
                   <div className="text-xs text-gray-500 mt-0.5">
-                    {u.stats.totalAnswered} otázok · {pct}% úspešnosť · najlepšia séria {u.stats.bestStreak}x
+                    {u.totalAnswered} otázok · {pct}% úspešnosť · najlepšia séria {u.bestStreak}x
                   </div>
                 </div>
 
                 <div className="text-right shrink-0">
-                  <div className="text-lg font-bold text-green-400">{u.stats.totalCorrect}</div>
+                  <div className="text-lg font-bold text-green-400">{u.totalCorrect}</div>
                   <div className="text-[10px] text-gray-600 uppercase">správnych</div>
                 </div>
               </div>
