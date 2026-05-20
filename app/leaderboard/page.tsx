@@ -19,6 +19,7 @@ export default function LeaderboardPage() {
   const router = useRouter();
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
+  const [syncing, setSyncing] = useState(false);
 
   const syncAndFetch = useCallback(async () => {
     if (!user) return;
@@ -67,7 +68,21 @@ export default function LeaderboardPage() {
         </Link>
       </div>
 
-      <h1 className="text-3xl font-bold text-white mb-2">Rebríček</h1>
+      <div className="flex items-center justify-between mb-2">
+        <h1 className="text-3xl font-bold text-white">Rebríček</h1>
+        <button
+          onClick={async () => {
+            setSyncing(true);
+            await syncAndFetch();
+            setSyncing(false);
+          }}
+          disabled={syncing}
+          className="flex items-center gap-2 rounded-lg border border-gray-700 bg-gray-900 hover:bg-gray-800 text-gray-300 text-sm font-medium px-3 py-2 transition-colors disabled:opacity-50"
+        >
+          <span className={syncing ? "animate-spin" : ""}>🔄</span>
+          {syncing ? "Synchronizujem…" : "Synchronizovať"}
+        </button>
+      </div>
       <p className="text-gray-400 mb-8">Kto sa pripravuje najlepšie?</p>
 
       {/* Global stats */}
