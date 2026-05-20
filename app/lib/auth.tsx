@@ -59,25 +59,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     setLoaded(true);
 
-    // One-time sync: push all local users with stats to shared leaderboard
-    const SYNCED_KEY = 'maturita_leaderboard_synced';
-    if (!localStorage.getItem(SYNCED_KEY)) {
-      const toSync = users.filter(u => u.stats.totalAnswered > 0);
-      Promise.all(toSync.map(u =>
-        fetch('/api/leaderboard', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            username: u.username,
-            totalAnswered: u.stats.totalAnswered,
-            totalCorrect: u.stats.totalCorrect,
-            bestStreak: u.stats.bestStreak,
-          }),
-        }).catch(() => {})
-      )).then(() => {
-        localStorage.setItem(SYNCED_KEY, '1');
-      });
-    }
+    // Sync all local users with stats to shared leaderboard on every load
+    const toSync = users.filter(u => u.stats.totalAnswered > 0);
+    toSync.forEach(u =>
+      fetch('/api/leaderboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: u.username,
+          totalAnswered: u.stats.totalAnswered,
+          totalCorrect: u.stats.totalCorrect,
+          bestStreak: u.stats.bestStreak,
+        }),
+      }).catch(() => {})
+    );
   }, []);
 
   const refreshUsers = useCallback(() => {

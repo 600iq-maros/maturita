@@ -20,23 +20,38 @@ export default function LeaderboardPage() {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchLeaderboard = useCallback(async () => {
+  const syncAndFetch = useCallback(async () => {
+    if (!user) return;
+    setLoading(true);
+    // Push current user stats to API first
+    if (user.stats.totalAnswered > 0) {
+      try {
+        await fetch('/api/leaderboard', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            username: user.username,
+            totalAnswered: user.stats.totalAnswered,
+            totalCorrect: user.stats.totalCorrect,
+            bestStreak: user.stats.bestStreak,
+          }),
+        });
+      } catch {}
+    }
+    // Then fetch leaderboard
     try {
       const res = await fetch('/api/leaderboard');
       if (res.ok) {
         setEntries(await res.json());
       }
-    } catch {
-      // Fallback: show nothing
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+    } catch {}
+    setLoading(false);
+  }, [user]);
 
   useEffect(() => {
     if (!user) router.replace('/login');
-    else fetchLeaderboard();
-  }, [user, router, fetchLeaderboard]);
+    else syncAndFetch();
+  }, [user, router, syncAndFetch]);
 
   if (!user) return null;
 
