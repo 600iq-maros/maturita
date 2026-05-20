@@ -77,3 +77,17 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: String(e) }, { status: 500 });
   }
 }
+
+// DELETE — remove a user from leaderboard
+export async function DELETE(req: Request) {
+  try {
+    const { username } = await req.json();
+    if (!username) return NextResponse.json({ error: 'Missing username' }, { status: 400 });
+    const data = await getBlob();
+    delete data.users[username];
+    await saveBlob(data);
+    return NextResponse.json({ ok: true });
+  } catch (e: unknown) {
+    return NextResponse.json({ error: String(e) }, { status: 500 });
+  }
+}
