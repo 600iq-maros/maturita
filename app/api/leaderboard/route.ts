@@ -1,4 +1,4 @@
-import { put, list, get } from '@vercel/blob';
+import { put, get } from '@vercel/blob';
 import { NextResponse } from 'next/server';
 
 const BLOB_PATH = 'leaderboard.json';
@@ -17,9 +17,11 @@ type LeaderboardData = {
 
 async function getBlob(): Promise<LeaderboardData> {
   try {
-    const { blobs } = await list({ prefix: BLOB_PATH, token: process.env.BLOB_READ_WRITE_TOKEN });
-    if (blobs.length === 0) return { users: {} };
-    const res = await get(blobs[0].url, { access: 'private', token: process.env.BLOB_READ_WRITE_TOKEN });
+    const res = await get(BLOB_PATH, {
+      access: 'private',
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+      useCache: false,
+    });
     if (!res || res.statusCode !== 200) return { users: {} };
     const text = await new Response(res.stream).text();
     return JSON.parse(text);
